@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_dark_fountain: 30 frame(s), 440x81 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,440,81;
+        440,0,440,81;
+        880,0,440,81;
+        0,81,440,81;
+        440,81,440,81;
+        880,81,440,81;
+        0,162,440,81;
+        440,162,440,81;
+        880,162,440,81;
+        0,243,440,81;
+        440,243,440,81;
+        880,243,440,81;
+        0,324,440,81;
+        440,324,440,81;
+        880,324,440,81;
+        0,405,440,81;
+        440,405,440,81;
+        880,405,440,81;
+        0,486,440,81;
+        440,486,440,81;
+        880,486,440,81;
+        0,567,440,81;
+        440,567,440,81;
+        880,567,440,81;
+        0,648,440,81;
+        440,648,440,81;
+        880,648,440,81;
+        0,729,440,81;
+        440,729,440,81;
+        880,729,440,81;
+    }
+
+    names
+    {
+        spr_funnytext_dark_fountain_000;
+        spr_funnytext_dark_fountain_001;
+        spr_funnytext_dark_fountain_002;
+        spr_funnytext_dark_fountain_003;
+        spr_funnytext_dark_fountain_004;
+        spr_funnytext_dark_fountain_005;
+        spr_funnytext_dark_fountain_006;
+        spr_funnytext_dark_fountain_007;
+        spr_funnytext_dark_fountain_008;
+        spr_funnytext_dark_fountain_009;
+        spr_funnytext_dark_fountain_010;
+        spr_funnytext_dark_fountain_011;
+        spr_funnytext_dark_fountain_012;
+        spr_funnytext_dark_fountain_013;
+        spr_funnytext_dark_fountain_014;
+        spr_funnytext_dark_fountain_015;
+        spr_funnytext_dark_fountain_016;
+        spr_funnytext_dark_fountain_017;
+        spr_funnytext_dark_fountain_018;
+        spr_funnytext_dark_fountain_019;
+        spr_funnytext_dark_fountain_020;
+        spr_funnytext_dark_fountain_021;
+        spr_funnytext_dark_fountain_022;
+        spr_funnytext_dark_fountain_023;
+        spr_funnytext_dark_fountain_024;
+        spr_funnytext_dark_fountain_025;
+        spr_funnytext_dark_fountain_026;
+        spr_funnytext_dark_fountain_027;
+        spr_funnytext_dark_fountain_028;
+        spr_funnytext_dark_fountain_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

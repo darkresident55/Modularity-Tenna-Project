@@ -1,0 +1,11 @@
+# scripts.modu
+# Default native script target is C++23. Use c++17, c++20, or c++26 only when a project needs a different target.
+cppStandard=c++23
+scriptsDir=Assets/Scripts
+outDir=Library/CompiledScripts
+define=MODU_SCRIPTING=1
+define=MODU_PROJECT_NAME="Tenna Cosplay and costume Project"
+linux.linkLib=pthread
+linux.linkLib=dl
+win.linkLib=User32.lib
+win.linkLib=Advapi32.lib

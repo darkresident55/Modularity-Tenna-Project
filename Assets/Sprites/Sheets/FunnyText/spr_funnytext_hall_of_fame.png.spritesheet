@@ -1,0 +1,32 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 1;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_hall_of_fame: 1 frame(s), 238x52 each, packed 1 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,238,52;
+    }
+
+    names
+    {
+        spr_funnytext_hall_of_fame_000;
+    }
+
+    scales
+    {
+        1,1;
+    }
+}
+
+info Layers
+{
+}

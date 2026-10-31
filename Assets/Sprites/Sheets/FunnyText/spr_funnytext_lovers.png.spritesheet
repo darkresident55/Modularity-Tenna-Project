@@ -1,0 +1,86 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 19;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_lovers: 19 frame(s), 151x40 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,151,40;
+        151,0,151,40;
+        302,0,151,40;
+        0,40,151,40;
+        151,40,151,40;
+        302,40,151,40;
+        0,80,151,40;
+        151,80,151,40;
+        302,80,151,40;
+        0,120,151,40;
+        151,120,151,40;
+        302,120,151,40;
+        0,160,151,40;
+        151,160,151,40;
+        302,160,151,40;
+        0,200,151,40;
+        151,200,151,40;
+        302,200,151,40;
+        0,240,151,40;
+    }
+
+    names
+    {
+        spr_funnytext_lovers_000;
+        spr_funnytext_lovers_001;
+        spr_funnytext_lovers_002;
+        spr_funnytext_lovers_003;
+        spr_funnytext_lovers_004;
+        spr_funnytext_lovers_005;
+        spr_funnytext_lovers_006;
+        spr_funnytext_lovers_007;
+        spr_funnytext_lovers_008;
+        spr_funnytext_lovers_009;
+        spr_funnytext_lovers_010;
+        spr_funnytext_lovers_011;
+        spr_funnytext_lovers_012;
+        spr_funnytext_lovers_013;
+        spr_funnytext_lovers_014;
+        spr_funnytext_lovers_015;
+        spr_funnytext_lovers_016;
+        spr_funnytext_lovers_017;
+        spr_funnytext_lovers_018;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

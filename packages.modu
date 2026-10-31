@@ -1,0 +1,8 @@
+# Modularity package manifest
+# Add optional script-time dependencies here
+# package=<id>
+# git=<id>|<name>|<url>|<path>|<includeDirs>|<defines>|<linuxLibs>|<windowsLibs>|<description>
+# modupak=<id>|<name>|<bundlePath>|<path>|<includeDirs>|<defines>|<linuxLibs>|<windowsLibs>|<description>
+package=moduengine.sprite-editor
+package=moduengine.spritesheet
+package=moduengine.2d-world

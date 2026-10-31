@@ -1,0 +1,156 @@
+add ModuCPP;
+add ModuCPP.Experimental;
+add ModuEngine;
+
+// Plays one sprite-sheet animation on the object it is attached to.
+//
+// Modularity renders a 2D frame from ui.spriteSheetFrame but never advances it
+// on its own, so playback is ticked here. ctx.SetSpriteClipIndex() writes that
+// frame directly, which is why "clip index" and "frame number" are the same
+// thing for a sheet.
+//
+// Used for both the TV TIME intro and every Tenna animation preview. A script
+// can only touch the sprite on its OWN object (cross-sheet texture swapping is
+// not wired in the engine), so each animation lives on its own object and
+// TennaShow enables exactly one at a time.
+public class SpriteSheetPlayer : ModuNode
+{
+    [Header("Playback")]
+    [Slider(0.1f, 60.0f)] public float fps = 15.0f;
+    public bool loop = true;
+    public bool playOnBegin = true;
+    // 0 means "use every clip in the sheet". Set this when a grid has padding
+    // slots -- the intro is a 12x14 grid but only 166 of those 168 are real.
+    // The generated .spritesheet sidecars already list only real frames, so
+    // leaving this at 0 is correct when the sidecar is assigned.
+    public int frameCount = 0;
+    public bool restartWhenEnabled = true;
+
+    [Header("Tail loop")]
+    public int tailLoopFrames = 0;
+    // 0 keeps the main fps. A short hold usually wants a much slower rate than
+    // the run it follows -- 2 frames at 30fps is a strobe.
+    [Slider(0.0f, 60.0f)] public float tailLoopFps = 0.0f;
+
+    [Header("Audio")]
+    public string startAudioClip;
+    [Slider(0.0f, 2.0f)] public float audioVolume = 1.0f;
+    // AudioSourceComponent defaults loop to true, so a stinger dropped into the
+    // object's Audio Source repeats forever. A spawn sound is a one-shot, so the
+    // flag is forced off here unless you deliberately want a looping clip.
+    public bool loopAudio = false;
+
+    [Header("On Finish")]
+    public bool disableSelfOnFinish = false;
+    [ObjectList] public string[] enableOnFinish;
+    [ObjectList] public string[] disableOnFinish;
+
+    private float accumulator = 0.0f;
+    private int frame = 0;
+    private bool playing = false;
+    private bool finished = false;
+    private bool tailActive = false;
+    private bool wasEnabled = false;
+    private int lastRestartSerial = 0;
+
+    void Begin()
+    {
+        lastRestartSerial = ParseInt(ctx.GetSetting("restartSerial", "0"), 0);
+        wasEnabled = ctx.IsObjectEnabled();
+        Rewind(playOnBegin);
+    }
+
+    void TickUpdate()
+    {
+        if (!ctx.object) return;
+
+        // Restarting when the object is re-enabled is what makes animation
+        // switching look right: TennaShow just toggles objects.
+        const bool enabledNow = ctx.IsObjectEnabled();
+        if (restartWhenEnabled && enabledNow && !wasEnabled) Rewind(true);
+        wasEnabled = enabledNow;
+        if (!enabledNow) return;
+
+        // TennaShow pokes these two settings to drive us.
+        const int restartSerial = ParseInt(ctx.GetSetting("restartSerial", "0"), 0);
+        if (restartSerial != lastRestartSerial) {
+            lastRestartSerial = restartSerial;
+            Rewind(true);
+        }
+        if (ctx.GetSettingBool("paused", false)) return;
+        // Not gated on `finished`: a tail loop keeps running after finishing.
+        if (!playing) return;
+
+        const int total = ResolveFrameCount();
+        if (total <= 1) return;
+
+        // First frame of the hold. With no tail this is just past the last
+        // frame, so the normal end-of-run path below applies unchanged.
+        const int tail = Math.Max(0, Math.Min(tailLoopFrames, total - 1));
+        const int tailStart = total - tail;
+
+        const float rate = (tailActive && tailLoopFps > 0.0f) ? tailLoopFps : fps;
+        if (rate <= 0.0f) return;
+
+        accumulator += Math.Max(0.0f, dt) * rate;
+        while (accumulator >= 1.0f) {
+            accumulator -= 1.0f;
+            frame += 1;
+            if (tailActive) {
+                if (frame >= total) frame = tailStart;
+                continue;
+            }
+            if (frame < tailStart) continue;
+            if (loop) {
+                frame = 0;
+                continue;
+            }
+            if (tail > 0) {
+                // Hand off to the hold and report finished, but keep playing.
+                // Drop the leftover accumulation: it was built at the run's
+                // rate, and spending it here would flash the hold forward
+                // before the slower rate takes over next tick.
+                tailActive = true;
+                frame = tailStart;
+                accumulator = 0.0f;
+                Finish(false);
+                break;
+            }
+            frame = tailStart - 1;
+            Finish(true);
+            break;
+        }
+        ctx.SetSpriteClipIndex(frame);
+    }
+
+    int ResolveFrameCount()
+    {
+        const int clips = ctx.GetSpriteClipCount();
+        if (frameCount > 0) return Math.Min(frameCount, clips);
+        return clips;
+    }
+
+    void Rewind(bool startPlaying)
+    {
+        accumulator = 0.0f;
+        frame = 0;
+        finished = false;
+        tailActive = false;
+        playing = startPlaying;
+        ctx.SetSpriteClipIndex(0);
+        ctx.SetAudioLoop(loopAudio);
+        if (startPlaying && !startAudioClip.empty()) {
+            ctx.PlayAudioOneShot(startAudioClip, audioVolume);
+        }
+    }
+
+    void Finish(bool stopPlayback)
+    {
+        if (stopPlayback) playing = false;
+        finished = true;
+        ctx.SetSettingBool("finished", true);
+        SetObjectsEnabledState(ctx, enableOnFinish, true);
+        SetObjectsEnabledState(ctx, disableOnFinish, false);
+        if (disableSelfOnFinish) ctx.SetObjectEnabled(false);
+    }
+}

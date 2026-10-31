@@ -1,0 +1,22 @@
+# Modularity project: files the editor rebuilds, or that belong to one machine.
+# Everything else in the project is backed up.
+
+# Compiled scripts, caches and temporary files (rebuilt when the project opens)
+/Library/*
+# Installed packages stay: the project needs them to open on another device.
+!/Library/InstalledPackages/
+
+# Per-user editor state: window layout and the launcher preview image
+/ProjectUserSettings/
+
+# Build output
+/Builds/
+/Build/
+/Cache/
+/Temp/
+
+# OS and tool clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vs/

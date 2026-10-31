@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_toriel: 30 frame(s), 159x55 each, packed 4 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,159,55;
+        159,0,159,55;
+        318,0,159,55;
+        477,0,159,55;
+        0,55,159,55;
+        159,55,159,55;
+        318,55,159,55;
+        477,55,159,55;
+        0,110,159,55;
+        159,110,159,55;
+        318,110,159,55;
+        477,110,159,55;
+        0,165,159,55;
+        159,165,159,55;
+        318,165,159,55;
+        477,165,159,55;
+        0,220,159,55;
+        159,220,159,55;
+        318,220,159,55;
+        477,220,159,55;
+        0,275,159,55;
+        159,275,159,55;
+        318,275,159,55;
+        477,275,159,55;
+        0,330,159,55;
+        159,330,159,55;
+        318,330,159,55;
+        477,330,159,55;
+        0,385,159,55;
+        159,385,159,55;
+    }
+
+    names
+    {
+        spr_funnytext_toriel_000;
+        spr_funnytext_toriel_001;
+        spr_funnytext_toriel_002;
+        spr_funnytext_toriel_003;
+        spr_funnytext_toriel_004;
+        spr_funnytext_toriel_005;
+        spr_funnytext_toriel_006;
+        spr_funnytext_toriel_007;
+        spr_funnytext_toriel_008;
+        spr_funnytext_toriel_009;
+        spr_funnytext_toriel_010;
+        spr_funnytext_toriel_011;
+        spr_funnytext_toriel_012;
+        spr_funnytext_toriel_013;
+        spr_funnytext_toriel_014;
+        spr_funnytext_toriel_015;
+        spr_funnytext_toriel_016;
+        spr_funnytext_toriel_017;
+        spr_funnytext_toriel_018;
+        spr_funnytext_toriel_019;
+        spr_funnytext_toriel_020;
+        spr_funnytext_toriel_021;
+        spr_funnytext_toriel_022;
+        spr_funnytext_toriel_023;
+        spr_funnytext_toriel_024;
+        spr_funnytext_toriel_025;
+        spr_funnytext_toriel_026;
+        spr_funnytext_toriel_027;
+        spr_funnytext_toriel_028;
+        spr_funnytext_toriel_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

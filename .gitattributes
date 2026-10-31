@@ -1,0 +1,4 @@
+# Store every file exactly as it is on disk. Scenes, materials and settings are
+# text the editor writes itself; letting Git convert line endings would make a
+# scene saved on Windows differ from the one opened on Linux.
+* -text

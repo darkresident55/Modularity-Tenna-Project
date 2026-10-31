@@ -1,0 +1,11 @@
+ManifestInfo()
+{
+    PackageID = "moduengine.spritesheet";
+    Name = "Spritesheet Tools";
+    Author = "Modularity Core";
+    Description = "Spritesheet parsing, import flow, and sidecar tooling for sprite assets.";
+    PackageType = "Asset Importer";
+    Subsystem = "2D Essentials";
+    Version = "1.1.0";
+    CompatibleModuEngineVersion = "7.0+";
+}

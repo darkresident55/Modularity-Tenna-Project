@@ -1,0 +1,83 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 18;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_physical_challenge: 18 frame(s), 391x69 each, packed 2 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,391,69;
+        391,0,391,69;
+        0,69,391,69;
+        391,69,391,69;
+        0,138,391,69;
+        391,138,391,69;
+        0,207,391,69;
+        391,207,391,69;
+        0,276,391,69;
+        391,276,391,69;
+        0,345,391,69;
+        391,345,391,69;
+        0,414,391,69;
+        391,414,391,69;
+        0,483,391,69;
+        391,483,391,69;
+        0,552,391,69;
+        391,552,391,69;
+    }
+
+    names
+    {
+        spr_funnytext_physical_challenge_000;
+        spr_funnytext_physical_challenge_001;
+        spr_funnytext_physical_challenge_002;
+        spr_funnytext_physical_challenge_003;
+        spr_funnytext_physical_challenge_004;
+        spr_funnytext_physical_challenge_005;
+        spr_funnytext_physical_challenge_006;
+        spr_funnytext_physical_challenge_007;
+        spr_funnytext_physical_challenge_008;
+        spr_funnytext_physical_challenge_009;
+        spr_funnytext_physical_challenge_010;
+        spr_funnytext_physical_challenge_011;
+        spr_funnytext_physical_challenge_012;
+        spr_funnytext_physical_challenge_013;
+        spr_funnytext_physical_challenge_014;
+        spr_funnytext_physical_challenge_015;
+        spr_funnytext_physical_challenge_016;
+        spr_funnytext_physical_challenge_017;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

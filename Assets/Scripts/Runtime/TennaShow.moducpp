@@ -1,0 +1,831 @@
+add ModuCPP;
+add ModuCPP.Experimental;
+add ModuEngine;
+SubScript TennaLine {
+    public string text;
+    public string animationRef;
+    public float typingSpeed = 0.035f;
+};
+public class TennaShow : ModuNode
+{
+    [Header("Bindings")]
+    [ObjectRef] public string introRef;
+    [ObjectRef] public string dialogueTextRef;
+    [ObjectRef] public string nameTextRef;
+    [ObjectList] public string[] animationRefs;
+    [Slider(0.0f, 10.0f)] public float introHoldSeconds = 0.0f;
+
+    [Header("Dialogue")]
+    public string speakerName = "TENNA";
+    public TennaLine[] lines;
+    public string dialogueBlock;
+    public bool loopDialogue = true;
+    public bool prefixAsterisk = true;
+    [Slider(12, 120)] public int wrapColumns = 42;
+    [Slider(0.0f, 20.0f)] public float commaPause = 4.0f;      // , : ;
+    [Slider(0.0f, 30.0f)] public float sentencePause = 9.0f;   // . ?
+
+    [Header("Funny text")]
+    [ObjectList] public string[] funnyTextRefs;
+    [Slider(0.0f, 1.0f)] public float popDuration = 0.22f;
+    [Slider(1.0f, 2.0f)] public float popOvershoot = 1.18f;
+    [Slider(0.0f, 12.0f)] public float shakeStrength = 3.0f;
+    [Slider(0.0f, 1.0f)] public float shakeDuration = 0.35f;
+
+    [Header("Backgrounds")]
+    [ObjectRef] public string defaultBackgroundRef;
+    [ObjectList] public string[] backgroundRefs;
+
+    [Header("Voice")]
+    public string blipClip = "Assets/Audio/Deltarune/Tenna/snd_tv_voice_short.wav";
+    [Slider(0.0f, 2.0f)] public float blipVolume = 0.8f;
+    [Slider(1, 8)] public int blipEveryNChars = 3;
+    [Slider(1, 16)] public int blipVariants = 1;
+
+    [Header("Mouth")]
+    [ObjectRef] public string mouthRef;
+    [Slider(-90.0f, 90.0f)] public float mouthClosedAngle = 0.0f;
+    [Slider(-90.0f, 90.0f)] public float mouthOpenAngle = -14.0f;
+    [Slider(0.5f, 24.0f)] public float mouthFlapsPerSecond = 7.0f;
+
+    [Header("Buttons")]
+    [ObjectRef] public string switchAnimationButtonRef;          // tap = next animation, 2+ fingers = previous
+    [ObjectRef] public string pauseAnimationButtonRef;
+    [ObjectRef] public string switchDialogueButtonRef;           // tap = next line, 2+ fingers = previous
+    [ObjectRef] public string pauseDialogueButtonRef;
+    [ObjectRef] public string resetButtonRef;                    // double tap = back to line 1 and animation 1
+    [Slider(1, 3)] public int resetTapFingers = 2;               // fingers each of the two taps needs (mouse counts as 1)
+    [Slider(0.1f, 1.0f)] public float doubleTapSeconds = 0.4f;
+
+    [Header("Desktop keys")]
+    public bool enableKeyboard = true;
+
+    [Header("Idle microphone")]
+    [ObjectRef] public string dialogueParentRef;                    // unset = the dialogue text's parent
+    [Slider(0.0f, 60.0f)] public float idleHideSeconds = 15.0f;     // 0 = never hide
+    public bool micDrivesMouthWhenIdle = true;
+    [Slider(-90.0f, 0.0f)] public float micQuietDb = -50.0f;        // this quiet or quieter = shut
+    [Slider(-90.0f, 0.0f)] public float micLoudDb = -20.0f;         // this loud or louder = fully open
+    [Slider(1.0f, 60.0f)] public float micOpenSpeed = 30.0f;
+    [Slider(1.0f, 60.0f)] public float micCloseSpeed = 12.0f;
+
+    private int lineIndex = 0;
+    private int animIndex = 0;
+    private size_t revealed = 0;
+    private string wrapped;
+    private int wrappedFor = -1;
+    private string[] triggerTag;
+    private int[] triggerAt;
+    private int nextTrigger = 0;
+    private string popObject;
+    private float popTimer = -1.0f;
+    private float popBaseW = 0.0f;
+    private float popBaseH = 0.0f;
+    private float popBaseX = 0.0f;
+    private float popBaseY = 0.0f;
+    private float holdTimer = 0.0f;
+    private float typeAccumulator = 0.0f;
+    private bool dialoguePaused = false;
+    private bool animationPaused = false;
+    private bool introDone = false;
+    private float introHold = -1.0f;
+    private int lastTouchCount = 0;
+    private int touchPeak = 0;
+    private int touchTarget = 0;
+    private int releasedFingers = 1;
+    private float lastResetTapTime = -1.0f;
+    private float showTime = 0.0f;
+    private size_t blipSeed = 22695477;
+    private int lastBlip = -1;
+    private float mouthTimer = 0.0f;
+    private float mouthLevel = 0.0f;
+    private float idleTimer = 0.0f;
+    private bool dialogueHidden = false;
+
+    inspector
+    {
+        Tabs {
+            Tab("Bindings")  { AutoFields(introRef, dialogueTextRef, nameTextRef, animationRefs); }
+            Tab("Dialogue")  { AutoFields(speakerName, dialogueBlock, lines, loopDialogue, prefixAsterisk, wrapColumns, commaPause, sentencePause); }
+            Tab("FunnyText") { AutoFields(funnyTextRefs, popDuration, popOvershoot, shakeStrength, shakeDuration); }
+            Tab("Background"){ AutoFields(defaultBackgroundRef, backgroundRefs); }
+            Tab("Voice")     { AutoFields(blipClip, blipVolume, blipEveryNChars, blipVariants); }
+            Tab("Mouth")     { AutoFields(mouthRef, mouthClosedAngle, mouthOpenAngle, mouthFlapsPerSecond); }
+            Tab("Input")     { AutoFields(switchAnimationButtonRef, pauseAnimationButtonRef, switchDialogueButtonRef, pauseDialogueButtonRef, resetButtonRef, resetTapFingers, doubleTapSeconds, enableKeyboard); }
+            Tab("Idle Mic")  {
+                AutoFields(dialogueParentRef, idleHideSeconds, micDrivesMouthWhenIdle, micQuietDb, micLoudDb, micOpenSpeed, micCloseSpeed);
+                Run(ImGui::TextDisabled("Hides: %s", DialogueParent() ? DialogueParent()->name.c_str() : "NOTHING - set dialogueParentRef"));
+                Run(ImGui::TextDisabled("Mic: %s", ctx.GetMicrophoneStatus().c_str()));
+                Run(ImGui::TextDisabled("Mic level: %.1f dB (quiet %.0f, loud %.0f)", MicDecibels(), micQuietDb, micLoudDb));
+            }
+            Tab("Runtime")   {
+                Run(ImGui::TextDisabled("Text target: %s", ResolveUITextTarget(ctx, dialogueTextRef) ? "OK" : "NO UI TEXT UNDER THIS REF"));
+                Run(ImGui::TextDisabled("Name target: %s", ResolveUITextTarget(ctx, nameTextRef) ? "OK" : "NO UI TEXT UNDER THIS REF"));
+                Run(ImGui::TextDisabled("Mouth ref: %s", ctx.ResolveObjectRef(mouthRef) ? "resolved" : "not set"));
+                Run(ImGui::TextDisabled("Lines: %d", static_cast<int>(lines.size())));
+                Run(ImGui::TextDisabled("Line 1 text len: %d",
+                    lines.empty() ? -1 : static_cast<int>(lines[0].text.size())));
+                Run(ImGui::TextDisabled("Line 1 text: %s",
+                    lines.empty() ? "(none)" : lines[0].text.substr(0, 40).c_str()));
+                Run(ImGui::TextDisabled("Wrapped len: %d   revealed: %d",
+                    static_cast<int>(wrapped.size()), static_cast<int>(revealed)));
+                Run(ImGui::TextDisabled("Intro done: %s", introDone ? "Yes" : "No"));
+                Run(ImGui::TextDisabled("Line: %d", lineIndex + 1));
+                Run(ImGui::TextDisabled("Animation: %d", animIndex + 1));
+                Run(ImGui::TextDisabled("Dialogue paused: %s", dialoguePaused ? "Yes" : "No"));
+                Run(ImGui::TextDisabled("Animation paused: %s", animationPaused ? "Yes" : "No"));
+                Run(ImGui::TextDisabled("Dialogue box: %s", dialogueHidden ? "Hidden (mic drives mouth)" : "Shown"));
+            }
+        }
+    }
+
+    void Begin()
+    {
+        introDone = false;
+        introHold = -1.0f;
+        mouthLevel = 0.0f;
+        mouthTimer = 0.0f;
+        lineIndex = 0;
+        animIndex = 0;
+        dialoguePaused = false;
+        animationPaused = false;
+        showTime = 0.0f;
+        idleTimer = 0.0f;
+        dialogueHidden = false;
+        SetUITextLabel(ctx, dialogueTextRef, "");
+        SetUITextLabel(ctx, nameTextRef, "");
+        ShowOnly(-1);
+        lastTouchCount = 0;
+        touchPeak = 0;
+        touchTarget = 0;
+        releasedFingers = 1;
+        lastResetTapTime = -1.0f;
+        SetObjectEnabledState(ctx, ctx.ResolveObjectRef(introRef), true);
+        SetObjectEnabledState(ctx, DialogueParent(), true);
+        // Opened now rather than when the box first hides, so on the tablet the permission
+        // prompt shows at launch instead of 15 seconds into the show.
+        if (micDrivesMouthWhenIdle && idleHideSeconds > 0.0f) ctx.RequestMicrophone();
+    }
+
+    void TickUpdate()
+    {
+        if (!ctx.object) return;
+        showTime += Math.Max(0.0f, dt);
+
+        if (!introDone) {
+            if (!IntroFinished()) { PollInput(); return; }
+            if (introHold < 0.0f) introHold = introHoldSeconds;
+            introHold -= Math.Max(0.0f, dt);
+            if (introHold > 0.0f) { PollInput(); return; }
+            BeginShow();
+        }
+
+        PollInput();
+        const float step = Math.Max(0.0f, dt);
+        const bool talking = TickTyping(step);
+        TickIdle(step, talking);
+        if (dialogueHidden && micDrivesMouthWhenIdle) TickMicMouth(step);
+        else TickMouth(step, talking);
+        TickPop(step);
+    }
+
+    // ---- intro ------------------------------------------------------------
+    bool IntroFinished()
+    {
+        SceneObject* intro = ctx.ResolveObjectRef(introRef);
+        if (!intro) return true;
+        if (!intro->enabled) return true;
+        ScriptComponent* player = FindPlayerScript(intro);
+        if (!player) return true;
+        return ParseBool(GetScriptSetting(player, "finished", "0"), false);
+    }
+
+    void BeginShow()
+    {
+        introDone = true;
+        SetObjectEnabledState(ctx, ctx.ResolveObjectRef(introRef), false);
+        SetUITextLabel(ctx, nameTextRef, speakerName);
+        ShowOnly(0);
+        StartLine(0);
+    }
+
+    // ---- dialogue ---------------------------------------------------------
+    char TriggerMark()
+    {
+        return static_cast<char>(1);
+    }
+
+    string MarkTags(const string& raw)
+    {
+        triggerTag.clear();
+        triggerAt.clear();
+        nextTrigger = 0;
+        string outText;
+        size_t i = 0;
+        while (i < raw.size()) {
+            if (raw[i] == '[') {
+                const size_t close = raw.find(']', i);
+                if (close != string::npos) {
+                    const string tag = Trim(raw.substr(i + 1, close - i - 1));
+                    if (!tag.empty()) {
+                        triggerTag.push_back(tag);
+                        outText += TriggerMark();
+                    }
+                    i = close + 1;
+                    if (i < raw.size() && raw[i] == ' ') i += 1;
+                    continue;
+                }
+            }
+            outText += raw[i];
+            i += 1;
+        }
+        return outText;
+    }
+
+    // Pulls the sentinels back out of the wrapped text, noting where each landed.
+    string TakeTriggerMarks(const string& marked)
+    {
+        string cleaned;
+        for (size_t i = 0; i < marked.size(); ++i) {
+            if (marked[i] == TriggerMark()) {
+                triggerAt.push_back(static_cast<int>(cleaned.size()));
+                continue;
+            }
+            cleaned += marked[i];
+        }
+        return cleaned;
+    }
+
+    // Fires every trigger the reveal has reached.
+    void FireTriggersUpTo(size_t revealedCount)
+    {
+        while (nextTrigger < static_cast<int>(triggerAt.size()) &&
+               nextTrigger < static_cast<int>(triggerTag.size()) &&
+               static_cast<size_t>(triggerAt[static_cast<size_t>(nextTrigger)]) <= revealedCount) {
+            FireTag(triggerTag[static_cast<size_t>(nextTrigger)]);
+            nextTrigger += 1;
+        }
+    }
+
+    // Swaps the backdrop. An empty name restores the default
+    void SwitchBackground(const string& name)
+    {
+        for (int i = 0; i < static_cast<int>(backgroundRefs.size()); ++i) {
+            SceneObject* alt = ctx.ResolveObjectRef(backgroundRefs[static_cast<size_t>(i)]);
+            if (!alt) continue;
+            SetObjectEnabledState(ctx, alt, !name.empty() && alt->name == name);
+        }
+        SceneObject* base = ctx.ResolveObjectRef(defaultBackgroundRef);
+        if (base) SetObjectEnabledState(ctx, base, name.empty());
+    }
+
+    void FireTag(const string& tag)
+    {
+        if (tag.size() > 3 && tag.substr(0, 3) == "BG:") {
+            SwitchBackground(Trim(tag.substr(3)));
+            return;
+        }
+        ShowFunnyText(tag);
+    }
+
+    // Enables the named word sprite and hides the others
+    void ShowFunnyText(const string& tag)
+    {
+        for (int i = 0; i < static_cast<int>(funnyTextRefs.size()); ++i) {
+            SceneObject* target = ctx.ResolveObjectRef(funnyTextRefs[static_cast<size_t>(i)]);
+            if (!target) continue;
+            const bool wanted = !tag.empty() && target->name == tag;
+            SetObjectEnabledState(ctx, target, wanted);
+            if (!wanted) continue;
+            BeginPop(target);
+            // AudioSourceComponent defaults loop to true, so a stinger sitting on
+            // the object repeats forever. The players clear it themselves, but a
+            // single-frame word usually has no player attached and would keep
+            // looping -- so clear it here too, for every word regardless.
+            ctx.SetObjectAudioLoop(target->id, false);
+            ScriptComponent* player = FindPlayerScript(target);
+            if (!player) continue;
+            const int serial = ParseInt(GetScriptSetting(player, "restartSerial", "0"), 0) + 1;
+            if (SetScriptSetting(player, "restartSerial", std::to_string(serial))) ctx.MarkDirty();
+        }
+    }
+
+
+    // One source of truth for both storage shapes
+    int LineCount()
+    {
+        if (!dialogueBlock.empty()) {
+            int n = 1;
+            size_t at = dialogueBlock.find("||");
+            while (at != string::npos) {
+                n += 1;
+                at = dialogueBlock.find("||", at + 2);
+            }
+            return n;
+        }
+        return static_cast<int>(lines.size());
+    }
+
+    string LineTextAt(int index)
+    {
+        if (!dialogueBlock.empty()) {
+            size_t start = 0;
+            for (int i = 0; i < index; ++i) {
+                const size_t at = dialogueBlock.find("||", start);
+                if (at == string::npos) return "";
+                start = at + 2;
+            }
+            const size_t end = dialogueBlock.find("||", start);
+            const string piece = (end == string::npos)
+                ? dialogueBlock.substr(start)
+                : dialogueBlock.substr(start, end - start);
+            return Trim(piece);
+        }
+        if (index < 0 || index >= static_cast<int>(lines.size())) return "";
+        return lines[static_cast<size_t>(index)].text;
+    }
+
+    string LineAnimAt(int index)
+    {
+        if (!dialogueBlock.empty()) return "";
+        if (index < 0 || index >= static_cast<int>(lines.size())) return "";
+        return lines[static_cast<size_t>(index)].animationRef;
+    }
+
+    float LineSpeedAt(int index)
+    {
+        if (dialogueBlock.empty() && index >= 0 && index < static_cast<int>(lines.size())) {
+            const float authored = lines[static_cast<size_t>(index)].typingSpeed;
+            if (authored > 0.0f) return authored;
+        }
+        return 0.035f;
+    }
+
+    void StartLine(int index)
+    {
+        const int count = LineCount();
+        if (count <= 0) return;
+        if (index < 0) index = loopDialogue ? count - 1 : 0;
+        if (index >= count) index = loopDialogue ? 0 : count - 1;
+        lineIndex = index;
+        revealed = 0;
+        typeAccumulator = 0.0f;
+        holdTimer = 0.0f;
+        ShowFunnyText("");
+        SwitchBackground("");
+        wrapped = TakeTriggerMarks(WrapForBox(MarkTags(LineTextAt(lineIndex))));
+        wrappedFor = lineIndex;
+        FireTriggersUpTo(0);
+        SetUITextLabel(ctx, dialogueTextRef, "");
+        ctx.AddConsoleMessage("TennaShow line " + std::to_string(lineIndex + 1) + " of " + std::to_string(count) + ": source=" + (dialogueBlock.empty() ? "array" : "block") + " textLen=" + std::to_string(LineTextAt(lineIndex).size()) + " wrappedLen=" + std::to_string(wrapped.size()));
+        const string wanted = LineAnimAt(lineIndex);
+        if (!wanted.empty()) SelectAnimationByRef(wanted);
+    }
+
+    bool TickTyping(float step)
+    {
+        if (dialoguePaused) return false;
+        const int count = LineCount();
+        if (count <= 0) return false;
+        const int safeIndex = Math.Max(0, Math.Min(lineIndex, count - 1));
+        if (wrappedFor != safeIndex || wrapped.empty()) {
+            wrapped = TakeTriggerMarks(WrapForBox(MarkTags(LineTextAt(safeIndex))));
+            wrappedFor = safeIndex;
+        }
+        if (wrapped.empty()) return false;
+        if (revealed >= wrapped.size()) return false;
+        const float speed = LineSpeedAt(safeIndex);
+        typeAccumulator += step;
+        // A spacer is a hole for a sprite, not something Tenna says, so it opens
+        // in one go rather than widening an underscore at a time. Done before
+        // the loop as well so a gap at the very start of a line is already there.
+        bool advanced = SkipSpacers();
+        while (typeAccumulator >= speed && revealed < wrapped.size()) {
+            typeAccumulator -= speed;
+            if (holdTimer > 0.0f) {
+                holdTimer -= 1.0f;
+                continue;
+            }
+            revealed += 1;
+            advanced = true;
+            const char c = wrapped[revealed - 1];
+            if (blipEveryNChars > 0 && (revealed % static_cast<size_t>(blipEveryNChars)) == 0) {
+                // Silent, like the space it stands in for.
+                if (c != ' ' && c != 10 && c != '_') ctx.PlayAudioOneShot(PickBlip(), blipVolume);
+            }
+            if (c == ',' || c == ':' || c == ';') holdTimer = commaPause;
+            else if (c == '.' || c == '?') holdTimer = sentencePause;
+            // Swallow any gap that follows this character at no cost.
+            SkipSpacers();
+        }
+        if (advanced) {
+            FireTriggersUpTo(revealed);
+            SetUITextLabel(ctx, dialogueTextRef, ForDisplay(wrapped.substr(0, revealed)));
+        }
+        return true;
+    }
+
+    // Greedy word wrap with a hanging indent, so wrapped lines sit under the text rather than under the bullet
+    //     Example:
+    //     * WELCOME back, everyone, to the show
+    //       that will make you SCREAM!
+    string WrapForBox(const string& raw)
+    {
+        const int cols = Math.Max(8, wrapColumns);
+        const string head = prefixAsterisk ? "* " : "";
+        const string indent = prefixAsterisk ? "  " : "";
+        string outText = head;
+        int lineLen = static_cast<int>(head.size());
+        bool firstOnLine = true;
+        size_t i = 0;
+        while (i < raw.size()) {
+            size_t j = raw.find(' ', i);
+            if (j == string::npos) j = raw.size();
+            const string word = raw.substr(i, j - i);
+            int wordLen = 0;
+            for (size_t k = 0; k < word.size(); ++k) {
+                if (word[k] != TriggerMark()) wordLen += 1;
+            }
+            if (!word.empty()) {
+                if (!firstOnLine && lineLen + 1 + wordLen > cols) {
+                    outText += static_cast<char>(10);   // newline
+                    outText += indent;
+                    lineLen = static_cast<int>(indent.size());
+                    firstOnLine = true;
+                }
+                if (!firstOnLine) {
+                    outText += " ";
+                    lineLen += 1;
+                }
+                outText += word;
+                lineLen += wordLen;
+                firstOnLine = false;
+            }
+            i = (j < raw.size()) ? (j + 1) : j;
+        }
+        return outText;
+    }
+
+    string PickBlip()
+    {
+        const int count = Math.Max(1, blipVariants);
+        if (count <= 1) return blipClip;
+        blipSeed = blipSeed * 1103515245 + 12345;
+        int pick = static_cast<int>((blipSeed >> 16) % static_cast<size_t>(count));
+        if (pick == lastBlip) pick = (pick + 1) % count;
+        lastBlip = pick;
+        return BlipVariantPath(pick + 1);
+    }
+
+    string BlipVariantPath(int variant)
+    {
+        if (variant <= 1) return blipClip;
+        const string suffix = "_" + std::to_string(variant);
+        const size_t dot = blipClip.rfind('.');
+        if (dot == string::npos) return blipClip + suffix;
+        return blipClip.substr(0, dot) + suffix + blipClip.substr(dot);
+    }
+
+    // Underscores are typed as blank space. They survive wrapping as ordinary
+    // characters, so they take up width and stay glued to their word, and are
+    // only swapped for spaces on the way to the label. That is what lets a gap
+    // be reserved for an inline word sprite by typing "____".
+    //
+    // Deliberately not turned into spaces earlier: a run of underscores counts
+    // as one "word" to the wrapper, so it moves to the next line as a block
+    // instead of collapsing the way consecutive spaces would.
+    // Reveals any spacers sitting at the cursor without spending typing time.
+    // Returns whether it moved, so the caller knows the label needs redrawing.
+    bool SkipSpacers()
+    {
+        bool moved = false;
+        while (revealed < wrapped.size() && wrapped[revealed] == '_') {
+            revealed += 1;
+            moved = true;
+        }
+        return moved;
+    }
+
+    string ForDisplay(const string& text)
+    {
+        string shown = text;
+        for (size_t i = 0; i < shown.size(); ++i) {
+            if (shown[i] == '_') shown[i] = ' ';
+        }
+        return shown;
+    }
+
+    // ---- mouth ------------------------------------------------------------
+    void TickMouth(float step, bool talking)
+    {
+        if (mouthRef.empty()) return;
+        SceneObject* mouth = ctx.ResolveObjectRef(mouthRef);
+        if (!mouth || !mouth->hasUI) return;
+        if (talking) {
+            mouthTimer += step * Math.Max(0.5f, mouthFlapsPerSecond);
+            while (mouthTimer >= 1.0f) mouthTimer -= 1.0f;
+        } else {
+            mouthTimer = 0.0f;
+        }
+        const float target = talking ? (0.5f - 0.5f * Math.Cos(mouthTimer * 6.28318531f)) : 0.0f;
+        mouthLevel += (target - mouthLevel) * Math.Min(1.0f, step * 18.0f);
+
+        ApplyMouthAngle(mouth, mouthClosedAngle + (mouthOpenAngle - mouthClosedAngle) * mouthLevel);
+    }
+
+    void ApplyMouthAngle(SceneObject* mouth, float degrees)
+    {
+        if (mouth->ui.rotation == degrees) return;
+        mouth->ui.rotation = degrees;
+        ctx.MarkDirty();
+    }
+
+    // ---- idle / microphone ------------------------------------------------
+    // The box to hide when idle. Unset falls back to the dialogue text's parent, which is
+    // "Dialogue System Parent" in Main.scene.
+    SceneObject* DialogueParent()
+    {
+        SceneObject* parent = ctx.ResolveObjectRef(dialogueParentRef);
+        if (parent) return parent;
+        SceneObject* text = ctx.ResolveObjectRef(dialogueTextRef);
+        if (!text || text->parentId < 0) return nullptr;
+        return ctx.FindObjectById(text->parentId);
+    }
+
+    // Once a line has finished (or dialogue is paused) for idleHideSeconds, the box goes
+    // away and the microphone takes over the mouth. Typing again brings it back.
+    void TickIdle(float step, bool talking)
+    {
+        if (talking) { ShowDialogueBox(); return; }
+        if (dialogueHidden || idleHideSeconds <= 0.0f) return;
+        idleTimer += step;
+        if (idleTimer < idleHideSeconds) return;
+        dialogueHidden = true;
+        SetObjectEnabledState(ctx, DialogueParent(), false);
+        // Word sprites sit in the gaps of the text (under "Animated Text", not the box), so
+        // they would float on their own without this. StartLine brings them back.
+        RestorePop();
+        ShowFunnyText("");
+    }
+
+    void ShowDialogueBox()
+    {
+        idleTimer = 0.0f;
+        if (!dialogueHidden) return;
+        dialogueHidden = false;
+        SetObjectEnabledState(ctx, DialogueParent(), true);
+    }
+
+    float MicDecibels()
+    {
+        const float level = ctx.GetMicrophoneLevel();
+        if (level <= 0.00001f) return -100.0f;
+        return 20.0f * std::log10(level);
+    }
+
+    // Louder opens the mouth further: micQuietDb and below is shut, micLoudDb and above is
+    // fully open. Opens fast and closes slower, so words read as flaps rather than flicker.
+    void TickMicMouth(float step)
+    {
+        mouthTimer = 0.0f;
+        if (mouthRef.empty()) return;
+        SceneObject* mouth = ctx.ResolveObjectRef(mouthRef);
+        if (!mouth || !mouth->hasUI) return;
+        const float span = Math.Max(1.0f, micLoudDb - micQuietDb);
+        const float target = Math.Clamp01((MicDecibels() - micQuietDb) / span);
+        const float speed = target > mouthLevel ? micOpenSpeed : micCloseSpeed;
+        mouthLevel += (target - mouthLevel) * Math.Min(1.0f, step * speed);
+        ApplyMouthAngle(mouth, mouthClosedAngle + (mouthOpenAngle - mouthClosedAngle) * mouthLevel);
+    }
+
+    void NextLine(int delta)
+    {
+        ShowDialogueBox();
+        if (LineCount() <= 0) return;
+        if (delta > 0 && !wrapped.empty() && revealed < wrapped.size()) {
+            revealed = wrapped.size();
+            holdTimer = 0.0f;
+            FireTriggersUpTo(revealed);
+            SetUITextLabel(ctx, dialogueTextRef, ForDisplay(wrapped));
+            return;
+        }
+        StartLine(lineIndex + delta);
+    }
+
+    // ---- word spawn shake ----------------------------------------------
+    void BeginPop(SceneObject* target)
+    {
+        RestorePop();
+        if (!target || !target->hasUI) return;
+        popObject = target->name;
+        popBaseW = target->ui.size.x;
+        popBaseH = target->ui.size.y;
+        popBaseX = target->ui.position.x;
+        popBaseY = target->ui.position.y;
+        popTimer = 0.0f;
+    }
+
+    void RestorePop()
+    {
+        if (popObject.empty()) return;
+        SceneObject* target = ctx.FindObjectByName(popObject);
+        if (target && target->hasUI) {
+            target->ui.size.x = popBaseW;
+            target->ui.size.y = popBaseH;
+            target->ui.position.x = popBaseX;
+            target->ui.position.y = popBaseY;
+            ctx.MarkDirty();
+        }
+        popObject.clear();
+        popTimer = -1.0f;
+    }
+
+    void TickPop(float step)
+    {
+        if (popTimer < 0.0f || popObject.empty()) return;
+        popTimer += step;
+
+        const float popLen = Math.Max(0.01f, popDuration);
+        const float shakeLen = Math.Max(0.0f, shakeDuration);
+        if (popTimer >= popLen && popTimer >= shakeLen) {
+            RestorePop();
+            return;
+        }
+
+        SceneObject* target = ctx.FindObjectByName(popObject);
+        if (!target || !target->hasUI) { RestorePop(); return; }
+
+        const float t = Math.Clamp01(popTimer / popLen);
+        float scale = 1.0f;
+        if (t < 0.5f) {
+            const float u = t / 0.5f;
+            scale = popOvershoot * (1.0f - (1.0f - u) * (1.0f - u));
+        } else {
+            const float u = (t - 0.5f) / 0.5f;
+            scale = popOvershoot + (1.0f - popOvershoot) * (u * u);
+        }
+
+        // Two different frequencies so the shiver does not read as a clean wobble, decaying to nothing by the end
+        float offsetX = 0.0f;
+        float offsetY = 0.0f;
+        if (shakeLen > 0.0f && popTimer < shakeLen) {
+            const float decay = 1.0f - Math.Clamp01(popTimer / shakeLen);
+            offsetX = Math.Sin(popTimer * 47.0f) * shakeStrength * decay;
+            offsetY = Math.Sin(popTimer * 61.0f) * shakeStrength * decay * 0.6f;
+        }
+
+        target->ui.size.x = popBaseW * scale;
+        target->ui.size.y = popBaseH * scale;
+        target->ui.position.x = popBaseX + offsetX;
+        target->ui.position.y = popBaseY + offsetY;
+        ctx.MarkDirty();
+    }
+
+    // ---- animations -------------------------------------------------------
+    void ShowOnly(int index)
+    {
+        for (int i = 0; i < static_cast<int>(animationRefs.size()); ++i) {
+            SceneObject* target = ctx.ResolveObjectRef(animationRefs[static_cast<size_t>(i)]);
+            SetObjectEnabledState(ctx, target, i == index);
+        }
+        if (index >= 0) animIndex = index;
+    }
+
+    void NextAnimation(int delta)
+    {
+        if (animationRefs.empty()) return;
+        const int count = static_cast<int>(animationRefs.size());
+        int next = (animIndex + delta) % count;
+        if (next < 0) next += count;
+        ShowOnly(next);
+        SetAnimationPaused(animationPaused);
+    }
+
+    void SelectAnimationByRef(const string& ref)
+    {
+        for (int i = 0; i < static_cast<int>(animationRefs.size()); ++i) {
+            if (animationRefs[static_cast<size_t>(i)] == ref) { ShowOnly(i); return; }
+        }
+    }
+
+    void SetAnimationPaused(bool paused)
+    {
+        animationPaused = paused;
+        if (animationRefs.empty()) return;
+
+        // Read the field into a local first (Note: the transpiler cannot lower a state field nested inside a subscript inside a ctx.* call argument (MD013).)
+        const int current = animIndex;
+        SceneObject* target = ctx.ResolveObjectRef(animationRefs[static_cast<size_t>(current)]);
+        ScriptComponent* player = FindPlayerScript(target);
+        if (player && SetScriptSetting(player, "paused", paused ? "1" : "0")) ctx.MarkDirty();
+    }
+
+    void RestartAnimation()
+    {
+        if (animationRefs.empty()) return;
+        const int current = animIndex;
+        SceneObject* target = ctx.ResolveObjectRef(animationRefs[static_cast<size_t>(current)]);
+        ScriptComponent* player = FindPlayerScript(target);
+        if (!player) return;
+        const int serial = ParseInt(GetScriptSetting(player, "restartSerial", "0"), 0) + 1;
+        if (SetScriptSetting(player, "restartSerial", std::to_string(serial))) ctx.MarkDirty();
+    }
+
+    // ---- input ------------------------------------------------------------
+    void PollInput()
+    {
+        if (enableKeyboard) {
+            if (ctx.IsKeyPressed(262)) NextLine(1);                           // right arrow
+            if (ctx.IsKeyPressed(263)) NextLine(-1);                          // left arrow
+            if (ctx.IsKeyPressed(264)) NextAnimation(1);                      // down arrow
+            if (ctx.IsKeyPressed(265)) NextAnimation(-1);                     // up arrow
+            if (ctx.IsKeyPressed(80)) SetAnimationPaused(!animationPaused);   // P
+            if (ctx.IsKeyPressed(79)) dialoguePaused = !dialoguePaused;       // O
+            if (ctx.IsKeyPressed(82)) Reinitialise();                         // R
+        }
+        PollButtons();
+    }
+
+    // The buttons say which one a finger is on; when it counts is decided here. The engine's own
+    // click is not used: on Android a touch held 0.3s turns into a right-click and cancels it, and
+    // with two fingers the release is tested wherever the last finger lifts. So the button under
+    // the touch is taken as it starts and fires once every finger is up, with the most fingers that
+    // were down at once. Not on the touch's first tick: the buttons were last drawn before the UI
+    // saw the new touch, still hovered where the previous one ended.
+    void PollButtons()
+    {
+        const int count = ctx.GetTouchCount();
+        const int previous = lastTouchCount;
+        lastTouchCount = count;
+        if (count > 0) {
+            if (previous <= 0) {
+                touchPeak = 0;
+                touchTarget = 0;
+            } else if (touchTarget == 0) {
+                touchTarget = HoveredButton();
+            }
+            touchPeak = Math.Max(touchPeak, count);
+            return;
+        }
+        if (previous <= 0) return;
+        releasedFingers = Math.Max(1, touchPeak);
+        const int target = touchTarget != 0 ? touchTarget : HoveredButton();
+        touchTarget = 0;
+        const bool back = releasedFingers >= 2;
+        if (target == 1) NextAnimation(back ? -1 : 1);
+        else if (target == 2) SetAnimationPaused(!animationPaused);
+        else if (target == 3) NextLine(back ? -1 : 1);
+        else if (target == 4) dialoguePaused = !dialoguePaused;
+        else if (target == 5) TapReset();
+    }
+
+    // 1-5 in the order of the Buttons fields, 0 for none. The buttons never overlap.
+    int HoveredButton()
+    {
+        if (IsHovered(switchAnimationButtonRef)) return 1;
+        if (IsHovered(pauseAnimationButtonRef)) return 2;
+        if (IsHovered(switchDialogueButtonRef)) return 3;
+        if (IsHovered(pauseDialogueButtonRef)) return 4;
+        if (IsHovered(resetButtonRef)) return 5;
+        return 0;
+    }
+
+    bool IsHovered(const string& which)
+    {
+        SceneObject* button = ctx.ResolveObjectRef(which);
+        return button && button->enabled && button->hasUI && button->ui.uiHovered;
+    }
+
+    void TapReset()
+    {
+        if (releasedFingers < resetTapFingers) { lastResetTapTime = -1.0f; return; }
+        if (lastResetTapTime >= 0.0f && (showTime - lastResetTapTime) <= doubleTapSeconds) {
+            lastResetTapTime = -1.0f;
+            Reinitialise();
+            return;
+        }
+        lastResetTapTime = showTime;
+    }
+
+    void Reinitialise()
+    {
+        ShowOnly(0);
+        SetAnimationPaused(false);
+        dialoguePaused = false;
+        RestartAnimation();
+        StartLine(0);
+    }
+}
+
+namespace {
+    ScriptComponent* FindPlayerScript(SceneObject* object)
+    {
+        if (!object) return nullptr;
+        for (ScriptComponent& script : object->scripts) {
+            std::string path = script.path;
+            for (char& c : path) c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+            if (path.find("spritesheetplayer") != std::string::npos || path.find("framelistplayer") != std::string::npos) return &script;
+        }
+        return nullptr;
+    }
+}

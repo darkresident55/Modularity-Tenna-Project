@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_game_over: 30 frame(s), 370x76 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,370,76;
+        370,0,370,76;
+        740,0,370,76;
+        0,76,370,76;
+        370,76,370,76;
+        740,76,370,76;
+        0,152,370,76;
+        370,152,370,76;
+        740,152,370,76;
+        0,228,370,76;
+        370,228,370,76;
+        740,228,370,76;
+        0,304,370,76;
+        370,304,370,76;
+        740,304,370,76;
+        0,380,370,76;
+        370,380,370,76;
+        740,380,370,76;
+        0,456,370,76;
+        370,456,370,76;
+        740,456,370,76;
+        0,532,370,76;
+        370,532,370,76;
+        740,532,370,76;
+        0,608,370,76;
+        370,608,370,76;
+        740,608,370,76;
+        0,684,370,76;
+        370,684,370,76;
+        740,684,370,76;
+    }
+
+    names
+    {
+        spr_funnytext_game_over_000;
+        spr_funnytext_game_over_001;
+        spr_funnytext_game_over_002;
+        spr_funnytext_game_over_003;
+        spr_funnytext_game_over_004;
+        spr_funnytext_game_over_005;
+        spr_funnytext_game_over_006;
+        spr_funnytext_game_over_007;
+        spr_funnytext_game_over_008;
+        spr_funnytext_game_over_009;
+        spr_funnytext_game_over_010;
+        spr_funnytext_game_over_011;
+        spr_funnytext_game_over_012;
+        spr_funnytext_game_over_013;
+        spr_funnytext_game_over_014;
+        spr_funnytext_game_over_015;
+        spr_funnytext_game_over_016;
+        spr_funnytext_game_over_017;
+        spr_funnytext_game_over_018;
+        spr_funnytext_game_over_019;
+        spr_funnytext_game_over_020;
+        spr_funnytext_game_over_021;
+        spr_funnytext_game_over_022;
+        spr_funnytext_game_over_023;
+        spr_funnytext_game_over_024;
+        spr_funnytext_game_over_025;
+        spr_funnytext_game_over_026;
+        spr_funnytext_game_over_027;
+        spr_funnytext_game_over_028;
+        spr_funnytext_game_over_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

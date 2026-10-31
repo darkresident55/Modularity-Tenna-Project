@@ -1,0 +1,464 @@
+{
+ "snd_tv_static_old": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_static_old.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_poweron": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_poweron.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_switch": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_switch.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_4": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_4.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_poweron2": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_poweron2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_static": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_static.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_6": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_6.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_5": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_5.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_3": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_3.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_8": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_8.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_2": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_9": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_9.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_10": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_10.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tenna_beep_loop": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tenna_beep_loop.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_alarm": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_alarm.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tv_voice_short_7": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tv_voice_short_7.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tvturnoff": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tvturnoff.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tvturnoff2": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_tvturnoff2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtsusral": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtsusral.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtq": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtq.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_text": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_text.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtasg": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtasg.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtpap": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtpap.wav",
+  "volume": 0.89,
+  "embedded": true
+ },
+ "snd_txtsans": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtsans.wav",
+  "volume": 0.86,
+  "embedded": true
+ },
+ "snd_txtund": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtund.wav",
+  "volume": 0.93,
+  "embedded": true
+ },
+ "snd_txtsus": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtsus.wav",
+  "volume": 0.78,
+  "embedded": true
+ },
+ "snd_txtnoe": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtnoe.wav",
+  "volume": 0.61,
+  "embedded": true
+ },
+ "snd_txtber": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtber.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtral": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtral.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtrud": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtrud.wav",
+  "volume": 0.82,
+  "embedded": true
+ },
+ "snd_txtjok": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtjok.wav",
+  "volume": 0.82,
+  "embedded": true
+ },
+ "snd_txtlan": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtlan.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtal": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtal.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txttor": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txttor.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtq_2": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtq_2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtspam": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtspam.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtspam2": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtspam2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtrx1": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtrx1.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtrx2": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtrx2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtrx3": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtrx3.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtecho": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtecho.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_txtq_alt": {
+  "group": "Text",
+  "file": "Audio/Deltarune/Text/snd_txtq_alt.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_brother": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_brother.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_bounce": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_bounce.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_scorecollect": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_scorecollect.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_woodblock": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_woodblock.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_susiezilla": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_susiezilla.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_vibraphones": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_vibraphones.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_gunshot": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_gunshot.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_prize": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_prize.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_names": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_names.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_bell": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_bell.wav",
+  "volume": 0.84,
+  "embedded": true
+ },
+ "snd_bell_bounce_short": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_bell_bounce_short.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_applause": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_applause.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_buzzerwrong": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_buzzerwrong.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_stardrop": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_stardrop.wav",
+  "volume": 0.61,
+  "embedded": true
+ },
+ "snd_moss_fanfare": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_moss_fanfare.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_dark_fountain": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_dark_fountain.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tm_quiz_a": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_tm_quiz_a.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tm_quiz_b": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_tm_quiz_b.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tm_quiz_c": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_tm_quiz_c.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_tm_quiz_d": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_tm_quiz_d.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_applause_single": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_applause_single.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_bell_bc": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_bell_bc.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_crowd_cheer_loop": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_crowd_cheer_loop.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_crowd_cheer_single": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_crowd_cheer_single.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_enter": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_enter.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_ftext_toriel": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_ftext_toriel.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_nes_intro": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_nes_intro.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_its_tv_time": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_its_tv_time.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_nes_intro_extended_part2": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_nes_intro_extended_part2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_creepyjingle": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_creepyjingle.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_nes_intro_extended": {
+  "group": "Tenna",
+  "file": "Audio/Deltarune/Tenna/snd_nes_intro_extended.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_boxing_round2": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_boxing_round2.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_boxing_round1": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_boxing_round1.wav",
+  "volume": 1.0,
+  "embedded": true
+ },
+ "snd_boxing_round3": {
+  "group": "Show",
+  "file": "Audio/Deltarune/Show/snd_boxing_round3.wav",
+  "volume": 1.0,
+  "embedded": true
+ }
+}

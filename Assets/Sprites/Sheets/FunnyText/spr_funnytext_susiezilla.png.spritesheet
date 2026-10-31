@@ -1,0 +1,77 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 16;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_susiezilla: 16 frame(s), 171x38 each, packed 2 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,171,38;
+        171,0,171,38;
+        0,38,171,38;
+        171,38,171,38;
+        0,76,171,38;
+        171,76,171,38;
+        0,114,171,38;
+        171,114,171,38;
+        0,152,171,38;
+        171,152,171,38;
+        0,190,171,38;
+        171,190,171,38;
+        0,228,171,38;
+        171,228,171,38;
+        0,266,171,38;
+        171,266,171,38;
+    }
+
+    names
+    {
+        spr_funnytext_susiezilla_000;
+        spr_funnytext_susiezilla_001;
+        spr_funnytext_susiezilla_002;
+        spr_funnytext_susiezilla_003;
+        spr_funnytext_susiezilla_004;
+        spr_funnytext_susiezilla_005;
+        spr_funnytext_susiezilla_006;
+        spr_funnytext_susiezilla_007;
+        spr_funnytext_susiezilla_008;
+        spr_funnytext_susiezilla_009;
+        spr_funnytext_susiezilla_010;
+        spr_funnytext_susiezilla_011;
+        spr_funnytext_susiezilla_012;
+        spr_funnytext_susiezilla_013;
+        spr_funnytext_susiezilla_014;
+        spr_funnytext_susiezilla_015;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

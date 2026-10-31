@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_over_small: 30 frame(s), 111x55 each, packed 4 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,111,55;
+        111,0,111,55;
+        222,0,111,55;
+        333,0,111,55;
+        0,55,111,55;
+        111,55,111,55;
+        222,55,111,55;
+        333,55,111,55;
+        0,110,111,55;
+        111,110,111,55;
+        222,110,111,55;
+        333,110,111,55;
+        0,165,111,55;
+        111,165,111,55;
+        222,165,111,55;
+        333,165,111,55;
+        0,220,111,55;
+        111,220,111,55;
+        222,220,111,55;
+        333,220,111,55;
+        0,275,111,55;
+        111,275,111,55;
+        222,275,111,55;
+        333,275,111,55;
+        0,330,111,55;
+        111,330,111,55;
+        222,330,111,55;
+        333,330,111,55;
+        0,385,111,55;
+        111,385,111,55;
+    }
+
+    names
+    {
+        spr_funnytext_over_small_000;
+        spr_funnytext_over_small_001;
+        spr_funnytext_over_small_002;
+        spr_funnytext_over_small_003;
+        spr_funnytext_over_small_004;
+        spr_funnytext_over_small_005;
+        spr_funnytext_over_small_006;
+        spr_funnytext_over_small_007;
+        spr_funnytext_over_small_008;
+        spr_funnytext_over_small_009;
+        spr_funnytext_over_small_010;
+        spr_funnytext_over_small_011;
+        spr_funnytext_over_small_012;
+        spr_funnytext_over_small_013;
+        spr_funnytext_over_small_014;
+        spr_funnytext_over_small_015;
+        spr_funnytext_over_small_016;
+        spr_funnytext_over_small_017;
+        spr_funnytext_over_small_018;
+        spr_funnytext_over_small_019;
+        spr_funnytext_over_small_020;
+        spr_funnytext_over_small_021;
+        spr_funnytext_over_small_022;
+        spr_funnytext_over_small_023;
+        spr_funnytext_over_small_024;
+        spr_funnytext_over_small_025;
+        spr_funnytext_over_small_026;
+        spr_funnytext_over_small_027;
+        spr_funnytext_over_small_028;
+        spr_funnytext_over_small_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

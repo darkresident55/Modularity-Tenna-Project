@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_over: 30 frame(s), 250x104 each, packed 4 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,250,104;
+        250,0,250,104;
+        500,0,250,104;
+        750,0,250,104;
+        0,104,250,104;
+        250,104,250,104;
+        500,104,250,104;
+        750,104,250,104;
+        0,208,250,104;
+        250,208,250,104;
+        500,208,250,104;
+        750,208,250,104;
+        0,312,250,104;
+        250,312,250,104;
+        500,312,250,104;
+        750,312,250,104;
+        0,416,250,104;
+        250,416,250,104;
+        500,416,250,104;
+        750,416,250,104;
+        0,520,250,104;
+        250,520,250,104;
+        500,520,250,104;
+        750,520,250,104;
+        0,624,250,104;
+        250,624,250,104;
+        500,624,250,104;
+        750,624,250,104;
+        0,728,250,104;
+        250,728,250,104;
+    }
+
+    names
+    {
+        spr_funnytext_over_000;
+        spr_funnytext_over_001;
+        spr_funnytext_over_002;
+        spr_funnytext_over_003;
+        spr_funnytext_over_004;
+        spr_funnytext_over_005;
+        spr_funnytext_over_006;
+        spr_funnytext_over_007;
+        spr_funnytext_over_008;
+        spr_funnytext_over_009;
+        spr_funnytext_over_010;
+        spr_funnytext_over_011;
+        spr_funnytext_over_012;
+        spr_funnytext_over_013;
+        spr_funnytext_over_014;
+        spr_funnytext_over_015;
+        spr_funnytext_over_016;
+        spr_funnytext_over_017;
+        spr_funnytext_over_018;
+        spr_funnytext_over_019;
+        spr_funnytext_over_020;
+        spr_funnytext_over_021;
+        spr_funnytext_over_022;
+        spr_funnytext_over_023;
+        spr_funnytext_over_024;
+        spr_funnytext_over_025;
+        spr_funnytext_over_026;
+        spr_funnytext_over_027;
+        spr_funnytext_over_028;
+        spr_funnytext_over_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

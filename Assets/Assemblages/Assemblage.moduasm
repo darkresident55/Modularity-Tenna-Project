@@ -1,0 +1,33 @@
+MODU_ASSEMBLAGE {
+    formatVersion=1;
+    assemblageId="asm-acd25f429ca7c559";
+    name="Assemblage";
+    kind="grid2d";
+    chunkSize=32;
+    cellSize=1,1;
+    origin=0,0;
+    nextLayerId=2;
+    tileset="";
+}
+
+MODU_ASMLAYER = (id=1, name="Ground") {
+    kind="tile";
+    order=0;
+    sortingOrder=0;
+    opacity=1;
+    tint=1,1,1,1;
+    visible=1;
+    locked=0;
+    collision=1;
+}
+
+MODU_ASMCHUNK = (layer=1, coord=0,-1) {
+    encoding="rle32";
+    cells=846*0,8*1,24*0,8*1,24*0,8*1,24*0,8*1,20*0,12*1,17*0,15*1,10*0;
+}
+
+MODU_ASMCHUNK = (layer=1, coord=0,0) {
+    encoding="rle32";
+    cells=7*0,12*1,20*0,12*1,20*0,12*1,20*0,9*1,912*0;
+}
+

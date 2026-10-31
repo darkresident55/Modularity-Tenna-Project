@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_rock_concert: 30 frame(s), 301x62 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,301,62;
+        301,0,301,62;
+        602,0,301,62;
+        0,62,301,62;
+        301,62,301,62;
+        602,62,301,62;
+        0,124,301,62;
+        301,124,301,62;
+        602,124,301,62;
+        0,186,301,62;
+        301,186,301,62;
+        602,186,301,62;
+        0,248,301,62;
+        301,248,301,62;
+        602,248,301,62;
+        0,310,301,62;
+        301,310,301,62;
+        602,310,301,62;
+        0,372,301,62;
+        301,372,301,62;
+        602,372,301,62;
+        0,434,301,62;
+        301,434,301,62;
+        602,434,301,62;
+        0,496,301,62;
+        301,496,301,62;
+        602,496,301,62;
+        0,558,301,62;
+        301,558,301,62;
+        602,558,301,62;
+    }
+
+    names
+    {
+        spr_funnytext_rock_concert_000;
+        spr_funnytext_rock_concert_001;
+        spr_funnytext_rock_concert_002;
+        spr_funnytext_rock_concert_003;
+        spr_funnytext_rock_concert_004;
+        spr_funnytext_rock_concert_005;
+        spr_funnytext_rock_concert_006;
+        spr_funnytext_rock_concert_007;
+        spr_funnytext_rock_concert_008;
+        spr_funnytext_rock_concert_009;
+        spr_funnytext_rock_concert_010;
+        spr_funnytext_rock_concert_011;
+        spr_funnytext_rock_concert_012;
+        spr_funnytext_rock_concert_013;
+        spr_funnytext_rock_concert_014;
+        spr_funnytext_rock_concert_015;
+        spr_funnytext_rock_concert_016;
+        spr_funnytext_rock_concert_017;
+        spr_funnytext_rock_concert_018;
+        spr_funnytext_rock_concert_019;
+        spr_funnytext_rock_concert_020;
+        spr_funnytext_rock_concert_021;
+        spr_funnytext_rock_concert_022;
+        spr_funnytext_rock_concert_023;
+        spr_funnytext_rock_concert_024;
+        spr_funnytext_rock_concert_025;
+        spr_funnytext_rock_concert_026;
+        spr_funnytext_rock_concert_027;
+        spr_funnytext_rock_concert_028;
+        spr_funnytext_rock_concert_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

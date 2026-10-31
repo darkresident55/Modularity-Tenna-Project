@@ -1,0 +1,56 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 9;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_win: 9 frame(s), 108x40 each, packed 2 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,108,40;
+        108,0,108,40;
+        0,40,108,40;
+        108,40,108,40;
+        0,80,108,40;
+        108,80,108,40;
+        0,120,108,40;
+        108,120,108,40;
+        0,160,108,40;
+    }
+
+    names
+    {
+        spr_funnytext_win_000;
+        spr_funnytext_win_001;
+        spr_funnytext_win_002;
+        spr_funnytext_win_003;
+        spr_funnytext_win_004;
+        spr_funnytext_win_005;
+        spr_funnytext_win_006;
+        spr_funnytext_win_007;
+        spr_funnytext_win_008;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

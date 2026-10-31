@@ -1,0 +1,11 @@
+ManifestInfo()
+{
+    PackageID = "moduengine.sprite-editor";
+    Name = "Pixel Sprite Editor";
+    Author = "Modularity Core";
+    Description = "Sprite painting and pixel-editing tools for Modularity projects.";
+    PackageType = "Editor Window";
+    Subsystem = "2D Essentials";
+    Version = "1.2.0";
+    CompatibleModuEngineVersion = "7.0+";
+}

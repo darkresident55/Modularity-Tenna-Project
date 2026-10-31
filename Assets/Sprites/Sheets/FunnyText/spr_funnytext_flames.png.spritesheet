@@ -1,0 +1,119 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 30;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_flames: 30 frame(s), 171x45 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,171,45;
+        171,0,171,45;
+        342,0,171,45;
+        0,45,171,45;
+        171,45,171,45;
+        342,45,171,45;
+        0,90,171,45;
+        171,90,171,45;
+        342,90,171,45;
+        0,135,171,45;
+        171,135,171,45;
+        342,135,171,45;
+        0,180,171,45;
+        171,180,171,45;
+        342,180,171,45;
+        0,225,171,45;
+        171,225,171,45;
+        342,225,171,45;
+        0,270,171,45;
+        171,270,171,45;
+        342,270,171,45;
+        0,315,171,45;
+        171,315,171,45;
+        342,315,171,45;
+        0,360,171,45;
+        171,360,171,45;
+        342,360,171,45;
+        0,405,171,45;
+        171,405,171,45;
+        342,405,171,45;
+    }
+
+    names
+    {
+        spr_funnytext_flames_000;
+        spr_funnytext_flames_001;
+        spr_funnytext_flames_002;
+        spr_funnytext_flames_003;
+        spr_funnytext_flames_004;
+        spr_funnytext_flames_005;
+        spr_funnytext_flames_006;
+        spr_funnytext_flames_007;
+        spr_funnytext_flames_008;
+        spr_funnytext_flames_009;
+        spr_funnytext_flames_010;
+        spr_funnytext_flames_011;
+        spr_funnytext_flames_012;
+        spr_funnytext_flames_013;
+        spr_funnytext_flames_014;
+        spr_funnytext_flames_015;
+        spr_funnytext_flames_016;
+        spr_funnytext_flames_017;
+        spr_funnytext_flames_018;
+        spr_funnytext_flames_019;
+        spr_funnytext_flames_020;
+        spr_funnytext_flames_021;
+        spr_funnytext_flames_022;
+        spr_funnytext_flames_023;
+        spr_funnytext_flames_024;
+        spr_funnytext_flames_025;
+        spr_funnytext_flames_026;
+        spr_funnytext_flames_027;
+        spr_funnytext_flames_028;
+        spr_funnytext_flames_029;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

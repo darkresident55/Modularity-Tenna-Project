@@ -1,0 +1,86 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 19;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_tears: 19 frame(s), 196x42 each, packed 3 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,196,42;
+        196,0,196,42;
+        392,0,196,42;
+        0,42,196,42;
+        196,42,196,42;
+        392,42,196,42;
+        0,84,196,42;
+        196,84,196,42;
+        392,84,196,42;
+        0,126,196,42;
+        196,126,196,42;
+        392,126,196,42;
+        0,168,196,42;
+        196,168,196,42;
+        392,168,196,42;
+        0,210,196,42;
+        196,210,196,42;
+        392,210,196,42;
+        0,252,196,42;
+    }
+
+    names
+    {
+        spr_funnytext_tears_000;
+        spr_funnytext_tears_001;
+        spr_funnytext_tears_002;
+        spr_funnytext_tears_003;
+        spr_funnytext_tears_004;
+        spr_funnytext_tears_005;
+        spr_funnytext_tears_006;
+        spr_funnytext_tears_007;
+        spr_funnytext_tears_008;
+        spr_funnytext_tears_009;
+        spr_funnytext_tears_010;
+        spr_funnytext_tears_011;
+        spr_funnytext_tears_012;
+        spr_funnytext_tears_013;
+        spr_funnytext_tears_014;
+        spr_funnytext_tears_015;
+        spr_funnytext_tears_016;
+        spr_funnytext_tears_017;
+        spr_funnytext_tears_018;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

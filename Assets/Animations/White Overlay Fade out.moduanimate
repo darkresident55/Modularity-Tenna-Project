@@ -1,0 +1,156 @@
+moduanimateVersion 2
+name "White Overlay Fade out"
+rootObjectId 32
+duration 3
+sampleRate 30
+bindingCount 1
+binding "" "Transform"
+trackCount 49
+track "localPosition.x" 1 0
+keyCount 1
+key 53 0 2 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 1
+key 54 0 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 1
+key 55 0 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 1
+key 56 0 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 1
+key 57 0 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 1
+key 58 0 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 1
+key 59 0 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 1
+key 60 0 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 1
+key 61 0 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 1
+key 62 0 9.53674e-07 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 1
+key 63 0 3.8147e-06 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 1
+key 103 0 9 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 1
+key 104 0 6 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 1
+key 66 0 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 1
+key 67 0 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 1
+key 68 0 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 1
+key 69 0 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 1
+key 70 0 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 1
+key 71 0 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 2
+key 72 0 1 0 0 2 1
+key 102 3 0 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 1
+key 73 0 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 1
+key 74 0 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 1
+key 75 0 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 1
+key 76 0 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 1
+key 77 0 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 1
+key 78 0 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 1
+key 79 0 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 1
+key 80 0 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 1
+key 81 0 1 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 1
+key 82 0 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 1
+key 83 0 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 1
+key 84 0 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 1
+key 85 0 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 1
+key 86 0 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 1
+key 87 0 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 1
+key 88 0 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 1
+key 89 0 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 1
+key 90 0 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 1
+key 91 0 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 1
+key 92 0 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 1
+key 93 0 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 1
+key 94 0 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 1
+key 95 0 0.3 0 0 2 1
+track "Audio.Volume" 1 0
+keyCount 1
+key 96 0 1 0 0 2 1
+track "Audio.MinDistance" 1 0
+keyCount 1
+key 97 0 1 0 0 2 1
+track "Audio.MaxDistance" 1 0
+keyCount 1
+key 98 0 25 0 0 2 1
+track "Audio.Loop" 1 0
+keyCount 1
+key 99 0 1 0 0 2 1
+track "Audio.Spatial" 1 0
+keyCount 1
+key 100 0 1 0 0 2 1
+track "ScriptSetting.3.key.interval" 1 0
+keyCount 1
+key 101 0 3 0 0 2 1

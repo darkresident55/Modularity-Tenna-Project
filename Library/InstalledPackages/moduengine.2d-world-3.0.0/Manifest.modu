@@ -1,0 +1,11 @@
+ManifestInfo()
+{
+    PackageID = "moduengine.2d-world";
+    Name = "2D World Essentials";
+    Author = "Modularity Core";
+    Description = "2D world rendering, Light2D, and 2D object tooling for Modularity. Refreshed for the 7.0 engine line: global 2D light resolution, per-light off-screen culling, and the Pixel/HDR light target controls.";
+    PackageType = "ImGui Based Render Core";
+    Subsystem = "2D Essentials";
+    Version = "3.0.0";
+    CompatibleModuEngineVersion = "7.0+";
+}

@@ -1,0 +1,74 @@
+LinkedSpriteName = "";
+SpriteVersion = 1;
+LastSavedUtc = "2026-08-22T14:16:09Z";
+
+ExpectedMinimumModuEngineVersionOrHigher = "";
+Expect_Layers = 1;
+Expect_rects = 15;
+
+Confirmation.StrictValidation = false;
+
+// spr_funnytext_brother: 15 frame(s), 182x47 each, packed 2 across.
+info AtlasInfo
+{
+    rects
+    {
+        0,0,182,47;
+        182,0,182,47;
+        0,47,182,47;
+        182,47,182,47;
+        0,94,182,47;
+        182,94,182,47;
+        0,141,182,47;
+        182,141,182,47;
+        0,188,182,47;
+        182,188,182,47;
+        0,235,182,47;
+        182,235,182,47;
+        0,282,182,47;
+        182,282,182,47;
+        0,329,182,47;
+    }
+
+    names
+    {
+        spr_funnytext_brother_000;
+        spr_funnytext_brother_001;
+        spr_funnytext_brother_002;
+        spr_funnytext_brother_003;
+        spr_funnytext_brother_004;
+        spr_funnytext_brother_005;
+        spr_funnytext_brother_006;
+        spr_funnytext_brother_007;
+        spr_funnytext_brother_008;
+        spr_funnytext_brother_009;
+        spr_funnytext_brother_010;
+        spr_funnytext_brother_011;
+        spr_funnytext_brother_012;
+        spr_funnytext_brother_013;
+        spr_funnytext_brother_014;
+    }
+
+    scales
+    {
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+        1,1;
+    }
+}
+
+info Layers
+{
+}

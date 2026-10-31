@@ -1,0 +1,1928 @@
+moduanimateVersion 2
+name "TV_TIME"
+rootObjectId 47
+duration 6
+sampleRate 30
+bindingCount 6
+binding "" "Transform"
+trackCount 22
+track "localPosition.x" 1 0
+keyCount 6
+key 324 0 0 0 0 2 1
+key 561 0.4 0 0 0 2 1
+key 802 1 0 0 0 2 1
+key 1041 1.8 0 0 0 2 1
+key 1278 2.53929 0 0 0 2 1
+key 87 6 0 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 325 0 0 0 0 2 1
+key 562 0.4 0 0 0 2 1
+key 803 1 0 0 0 2 1
+key 1042 1.8 0 0 0 2 1
+key 1279 2.53929 0 0 0 2 1
+key 88 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 326 0 0 0 0 2 1
+key 563 0.4 0 0 0 2 1
+key 804 1 0 0 0 2 1
+key 1043 1.8 0 0 0 2 1
+key 1280 2.53929 0 0 0 2 1
+key 89 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 327 0 -0 0 0 2 1
+key 564 0.4 -0 0 0 2 1
+key 805 1 0 0 0 2 1
+key 1044 1.8 0 0 0 2 1
+key 1281 2.53929 0 0 0 2 1
+key 90 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 328 0 0 0 0 2 1
+key 565 0.4 0 0 0 2 1
+key 806 1 0 0 0 2 1
+key 1045 1.8 0 0 0 2 1
+key 1282 2.53929 0 0 0 2 1
+key 91 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 329 0 -0 0 0 2 1
+key 566 0.4 -0 0 0 2 1
+key 807 1 0 0 0 2 1
+key 1046 1.8 0 0 0 2 1
+key 1283 2.53929 0 0 0 2 1
+key 92 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 330 0 1 0 0 2 1
+key 567 0.4 1 0 0 2 1
+key 808 1 1 0 0 2 1
+key 1047 1.8 1 0 0 2 1
+key 1284 2.53929 1 0 0 2 1
+key 93 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 331 0 1 0 0 2 1
+key 568 0.4 1 0 0 2 1
+key 809 1 1 0 0 2 1
+key 1048 1.8 1 0 0 2 1
+key 1285 2.53929 1 0 0 2 1
+key 94 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 332 0 1 0 0 2 1
+key 569 0.4 1 0 0 2 1
+key 810 1 1 0 0 2 1
+key 1049 1.8 1 0 0 2 1
+key 1286 2.53929 1 0 0 2 1
+key 95 6 1 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 333 0 1 0 0 2 1
+key 570 0.4 1 0 0 2 1
+key 811 1 1 0 0 2 1
+key 1050 1.8 1 0 0 2 1
+key 1287 2.53929 1 0 0 2 1
+key 96 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 334 0 1 0 0 2 1
+key 571 0.4 1 0 0 2 1
+key 812 1 1 0 0 2 1
+key 1051 1.8 1 0 0 2 1
+key 1288 2.53929 1 0 0 2 1
+key 97 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 335 0 1 0 0 2 1
+key 572 0.4 1 0 0 2 1
+key 813 1 1 0 0 2 1
+key 1052 1.8 1 0 0 2 1
+key 1289 2.53929 1 0 0 2 1
+key 98 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 336 0 1 0 0 2 1
+key 573 0.4 1 0 0 2 1
+key 814 1 1 0 0 2 1
+key 1053 1.8 1 0 0 2 1
+key 1290 2.53929 1 0 0 2 1
+key 99 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 337 0 0.2 0 0 2 1
+key 574 0.4 0.2 0 0 2 1
+key 815 1 0.2 0 0 2 1
+key 1054 1.8 0.2 0 0 2 1
+key 1291 2.53929 0.2 0 0 2 1
+key 100 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 338 0 0.5 0 0 2 1
+key 575 0.4 0.5 0 0 2 1
+key 816 1 0.5 0 0 2 1
+key 1055 1.8 0.5 0 0 2 1
+key 1292 2.53929 0.5 0 0 2 1
+key 101 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 339 0 32 0 0 2 1
+key 576 0.4 32 0 0 2 1
+key 817 1 32 0 0 2 1
+key 1056 1.8 32 0 0 2 1
+key 1293 2.53929 32 0 0 2 1
+key 102 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 340 0 0.3 0 0 2 1
+key 577 0.4 0.3 0 0 2 1
+key 818 1 0.3 0 0 2 1
+key 1057 1.8 0.3 0 0 2 1
+key 1294 2.53929 0.3 0 0 2 1
+key 103 6 0.3 0 0 2 1
+track "Audio.Volume" 1 0
+keyCount 6
+key 341 0 1 0 0 2 1
+key 578 0.4 1 0 0 2 1
+key 819 1 1 0 0 2 1
+key 1058 1.8 1 0 0 2 1
+key 1295 2.53929 1 0 0 2 1
+key 104 6 1 0 0 2 1
+track "Audio.MinDistance" 1 0
+keyCount 6
+key 342 0 1 0 0 2 1
+key 579 0.4 1 0 0 2 1
+key 820 1 1 0 0 2 1
+key 1059 1.8 1 0 0 2 1
+key 1296 2.53929 1 0 0 2 1
+key 105 6 1 0 0 2 1
+track "Audio.MaxDistance" 1 0
+keyCount 6
+key 343 0 25 0 0 2 1
+key 580 0.4 25 0 0 2 1
+key 821 1 25 0 0 2 1
+key 1060 1.8 25 0 0 2 1
+key 1297 2.53929 25 0 0 2 1
+key 106 6 25 0 0 2 1
+track "Audio.Loop" 1 0
+keyCount 6
+key 344 0 1 0 0 2 1
+key 581 0.4 1 0 0 2 1
+key 822 1 1 0 0 2 1
+key 1061 1.8 1 0 0 2 1
+key 1298 2.53929 1 0 0 2 1
+key 107 6 1 0 0 2 1
+track "Audio.Spatial" 1 0
+keyCount 6
+key 345 0 1 0 0 2 1
+key 582 0.4 1 0 0 2 1
+key 823 1 1 0 0 2 1
+key 1062 1.8 1 0 0 2 1
+key 1299 2.53929 1 0 0 2 1
+key 108 6 1 0 0 2 1
+binding "FT_Names (Copy) (Copy) (Copy) (Copy)" "Transform"
+trackCount 43
+track "localPosition.x" 1 0
+keyCount 6
+key 346 0 8 0 0 2 1
+key 583 0.4 8 0 0 2 1
+key 824 1 8 0 0 2 1
+key 1063 1.8 8 0 0 2 1
+key 1300 2.53929 8 0 0 2 1
+key 109 6 8 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 347 0 0 0 0 2 1
+key 584 0.4 0 0 0 2 1
+key 825 1 0 0 0 2 1
+key 1064 1.8 0 0 0 2 1
+key 1301 2.53929 0 0 0 2 1
+key 110 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 348 0 0 0 0 2 1
+key 585 0.4 0 0 0 2 1
+key 826 1 0 0 0 2 1
+key 1065 1.8 0 0 0 2 1
+key 1302 2.53929 0 0 0 2 1
+key 111 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 349 0 -0 0 0 2 1
+key 586 0.4 -0 0 0 2 1
+key 827 1 0 0 0 2 1
+key 1066 1.8 0 0 0 2 1
+key 1303 2.53929 0 0 0 2 1
+key 112 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 350 0 0 0 0 2 1
+key 587 0.4 0 0 0 2 1
+key 828 1 0 0 0 2 1
+key 1067 1.8 0 0 0 2 1
+key 1304 2.53929 0 0 0 2 1
+key 113 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 351 0 -0 0 0 2 1
+key 588 0.4 -0 0 0 2 1
+key 829 1 0 0 0 2 1
+key 1068 1.8 0 0 0 2 1
+key 1305 2.53929 0 0 0 2 1
+key 114 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 352 0 1 0 0 2 1
+key 589 0.4 1 0 0 2 1
+key 830 1 1 0 0 2 1
+key 1069 1.8 1 0 0 2 1
+key 1306 2.53929 1 0 0 2 1
+key 115 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 353 0 1 0 0 2 1
+key 590 0.4 1 0 0 2 1
+key 831 1 1 0 0 2 1
+key 1070 1.8 1 0 0 2 1
+key 1307 2.53929 1 0 0 2 1
+key 116 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 354 0 1 0 0 2 1
+key 591 0.4 1 0 0 2 1
+key 832 1 1 0 0 2 1
+key 1071 1.8 1 0 0 2 1
+key 1308 2.53929 1 0 0 2 1
+key 117 6 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 6
+key 355 0 1.21 0 0 2 1
+key 592 0.4 1.21 0 0 2 1
+key 833 1 1.21 0 0 2 1
+key 1072 1.8 1.21 0 0 2 1
+key 1309 2.53929 1.21 0 0 2 1
+key 118 6 1.21 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 6
+key 356 0 -1.69848 0 0 2 1
+key 593 0.4 -1.69848 0 0 2 1
+key 834 1 -1.69848 0 0 2 1
+key 1073 1.8 -1.69848 0 0 2 1
+key 1310 2.53929 -1.69848 0 0 2 1
+key 119 6 -1.69848 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 7
+key 357 0 1.99137 0 0 2 1
+key 594 0.4 1.99137 0 0 2 1
+key 835 1 1.99137 0 0 2 1
+key 1074 1.8 1.99137 0 0 2 1
+key 1559 2.2 3.39128 0 0 2 1
+key 1311 2.53929 1.99137 0 0 2 1
+key 120 6 1.99137 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 7
+key 358 0 1.07572 0 0 2 1
+key 595 0.4 1.07572 0 0 2 1
+key 836 1 1.07572 0 0 2 1
+key 1075 1.8 1.07572 0 0 2 1
+key 1560 2.2 1.83414 0 0 2 1
+key 1312 2.53929 1.07572 0 0 2 1
+key 121 6 1.07572 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 6
+key 359 0 0 0 0 2 1
+key 596 0.4 0 0 0 2 1
+key 837 1 0 0 0 2 1
+key 1076 1.8 0 0 0 2 1
+key 1313 2.53929 0 0 0 2 1
+key 122 6 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 6
+key 360 0 0.5 0 0 2 1
+key 597 0.4 0.5 0 0 2 1
+key 838 1 0.5 0 0 2 1
+key 1077 1.8 0.5 0 0 2 1
+key 1314 2.53929 0.5 0 0 2 1
+key 123 6 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 6
+key 361 0 1 0 0 2 1
+key 598 0.4 1 0 0 2 1
+key 839 1 1 0 0 2 1
+key 1078 1.8 1 0 0 2 1
+key 1315 2.53929 1 0 0 2 1
+key 124 6 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 6
+key 362 0 1 0 0 2 1
+key 599 0.4 1 0 0 2 1
+key 840 1 1 0 0 2 1
+key 1079 1.8 1 0 0 2 1
+key 1316 2.53929 1 0 0 2 1
+key 125 6 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 6
+key 363 0 1 0 0 2 1
+key 600 0.4 1 0 0 2 1
+key 841 1 1 0 0 2 1
+key 1080 1.8 1 0 0 2 1
+key 1317 2.53929 1 0 0 2 1
+key 126 6 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 6
+key 364 0 1 0 0 2 1
+key 601 0.4 1 0 0 2 1
+key 842 1 1 0 0 2 1
+key 1081 1.8 1 0 0 2 1
+key 1318 2.53929 1 0 0 2 1
+key 127 6 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 9
+key 365 0 0 0 0 2 1
+key 602 0.4 0 0 0 2 1
+key 1519 0.633333 0 0 0 2 1
+key 843 1 0 0 0 2 1
+key 1082 1.8 0 0 0 2 1
+key 1561 2.18499 0.00392157 0 0 2 1
+key 1558 2.2 1 0 0 2 1
+key 1319 2.53333 1 0 0 2 1
+key 128 6 1 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 6
+key 366 0 1 0 0 2 1
+key 603 0.4 1 0 0 2 1
+key 844 1 1 0 0 2 1
+key 1083 1.8 1 0 0 2 1
+key 1320 2.53929 1 0 0 2 1
+key 129 6 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 6
+key 367 0 0 0 0 2 1
+key 604 0.4 0 0 0 2 1
+key 845 1 0 0 0 2 1
+key 1084 1.8 0 0 0 2 1
+key 1321 2.53929 0 0 0 2 1
+key 130 6 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 6
+key 368 0 0 0 0 2 1
+key 605 0.4 0 0 0 2 1
+key 846 1 0 0 0 2 1
+key 1085 1.8 0 0 0 2 1
+key 1322 2.53929 0 0 0 2 1
+key 131 6 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 6
+key 369 0 1 0 0 2 1
+key 606 0.4 1 0 0 2 1
+key 847 1 1 0 0 2 1
+key 1086 1.8 1 0 0 2 1
+key 1323 2.53929 1 0 0 2 1
+key 132 6 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 6
+key 370 0 0 0 0 2 1
+key 607 0.4 0 0 0 2 1
+key 848 1 0 0 0 2 1
+key 1087 1.8 0 0 0 2 1
+key 1324 2.53929 0 0 0 2 1
+key 133 6 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 6
+key 371 0 1 0 0 2 1
+key 608 0.4 1 0 0 2 1
+key 849 1 1 0 0 2 1
+key 1088 1.8 1 0 0 2 1
+key 1325 2.53929 1 0 0 2 1
+key 134 6 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 6
+key 372 0 0 0 0 2 1
+key 609 0.4 0 0 0 2 1
+key 850 1 0 0 0 2 1
+key 1089 1.8 0 0 0 2 1
+key 1326 2.53929 0 0 0 2 1
+key 135 6 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 6
+key 373 0 12 0 0 2 1
+key 610 0.4 12 0 0 2 1
+key 851 1 12 0 0 2 1
+key 1090 1.8 12 0 0 2 1
+key 1327 2.53929 12 0 0 2 1
+key 136 6 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 6
+key 374 0 0 0 0 2 1
+key 611 0.4 0 0 0 2 1
+key 852 1 0 0 0 2 1
+key 1091 1.8 0 0 0 2 1
+key 1328 2.53929 0 0 0 2 1
+key 137 6 0 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 6
+key 375 0 0 0 0 2 1
+key 612 0.4 0 0 0 2 1
+key 853 1 0 0 0 2 1
+key 1092 1.8 0 0 0 2 1
+key 1329 2.53929 0 0 0 2 1
+key 138 6 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 6
+key 376 0 1 0 0 2 1
+key 613 0.4 1 0 0 2 1
+key 854 1 1 0 0 2 1
+key 1093 1.8 1 0 0 2 1
+key 1330 2.53929 1 0 0 2 1
+key 139 6 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 6
+key 377 0 1 0 0 2 1
+key 614 0.4 1 0 0 2 1
+key 855 1 1 0 0 2 1
+key 1094 1.8 1 0 0 2 1
+key 1331 2.53929 1 0 0 2 1
+key 140 6 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 6
+key 378 0 0 0 0 2 1
+key 615 0.4 0 0 0 2 1
+key 856 1 0 0 0 2 1
+key 1095 1.8 0 0 0 2 1
+key 1332 2.53929 0 0 0 2 1
+key 141 6 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 6
+key 379 0 0 0 0 2 1
+key 616 0.4 0 0 0 2 1
+key 857 1 0 0 0 2 1
+key 1096 1.8 0 0 0 2 1
+key 1333 2.53929 0 0 0 2 1
+key 142 6 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 6
+key 380 0 0 0 0 2 1
+key 617 0.4 0 0 0 2 1
+key 858 1 0 0 0 2 1
+key 1097 1.8 0 0 0 2 1
+key 1334 2.53929 0 0 0 2 1
+key 143 6 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 381 0 1 0 0 2 1
+key 618 0.4 1 0 0 2 1
+key 859 1 1 0 0 2 1
+key 1098 1.8 1 0 0 2 1
+key 1335 2.53929 1 0 0 2 1
+key 144 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 382 0 1 0 0 2 1
+key 619 0.4 1 0 0 2 1
+key 860 1 1 0 0 2 1
+key 1099 1.8 1 0 0 2 1
+key 1336 2.53929 1 0 0 2 1
+key 145 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 383 0 1 0 0 2 1
+key 620 0.4 1 0 0 2 1
+key 861 1 1 0 0 2 1
+key 1100 1.8 1 0 0 2 1
+key 1337 2.53929 1 0 0 2 1
+key 146 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 384 0 1 0 0 2 1
+key 621 0.4 1 0 0 2 1
+key 862 1 1 0 0 2 1
+key 1101 1.8 1 0 0 2 1
+key 1338 2.53929 1 0 0 2 1
+key 147 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 385 0 0.2 0 0 2 1
+key 622 0.4 0.2 0 0 2 1
+key 863 1 0.2 0 0 2 1
+key 1102 1.8 0.2 0 0 2 1
+key 1339 2.53929 0.2 0 0 2 1
+key 148 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 386 0 0.5 0 0 2 1
+key 623 0.4 0.5 0 0 2 1
+key 864 1 0.5 0 0 2 1
+key 1103 1.8 0.5 0 0 2 1
+key 1340 2.53929 0.5 0 0 2 1
+key 149 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 387 0 32 0 0 2 1
+key 624 0.4 32 0 0 2 1
+key 865 1 32 0 0 2 1
+key 1104 1.8 32 0 0 2 1
+key 1341 2.53929 32 0 0 2 1
+key 150 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 388 0 0.3 0 0 2 1
+key 625 0.4 0.3 0 0 2 1
+key 866 1 0.3 0 0 2 1
+key 1105 1.8 0.3 0 0 2 1
+key 1342 2.53929 0.3 0 0 2 1
+key 151 6 0.3 0 0 2 1
+binding "FT_Names (Copy) (Copy) (Copy)" "Transform"
+trackCount 43
+track "localPosition.x" 1 0
+keyCount 6
+key 389 0 7 0 0 2 1
+key 626 0.4 7 0 0 2 1
+key 867 1 7 0 0 2 1
+key 1106 1.8 7 0 0 2 1
+key 1343 2.53929 7 0 0 2 1
+key 152 6 7 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 390 0 0 0 0 2 1
+key 627 0.4 0 0 0 2 1
+key 868 1 0 0 0 2 1
+key 1107 1.8 0 0 0 2 1
+key 1344 2.53929 0 0 0 2 1
+key 153 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 391 0 0 0 0 2 1
+key 628 0.4 0 0 0 2 1
+key 869 1 0 0 0 2 1
+key 1108 1.8 0 0 0 2 1
+key 1345 2.53929 0 0 0 2 1
+key 154 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 392 0 -0 0 0 2 1
+key 629 0.4 -0 0 0 2 1
+key 870 1 0 0 0 2 1
+key 1109 1.8 0 0 0 2 1
+key 1346 2.53929 0 0 0 2 1
+key 155 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 393 0 0 0 0 2 1
+key 630 0.4 0 0 0 2 1
+key 871 1 0 0 0 2 1
+key 1110 1.8 0 0 0 2 1
+key 1347 2.53929 0 0 0 2 1
+key 156 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 394 0 -0 0 0 2 1
+key 631 0.4 -0 0 0 2 1
+key 872 1 0 0 0 2 1
+key 1111 1.8 0 0 0 2 1
+key 1348 2.53929 0 0 0 2 1
+key 157 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 395 0 1 0 0 2 1
+key 632 0.4 1 0 0 2 1
+key 873 1 1 0 0 2 1
+key 1112 1.8 1 0 0 2 1
+key 1349 2.53929 1 0 0 2 1
+key 158 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 396 0 1 0 0 2 1
+key 633 0.4 1 0 0 2 1
+key 874 1 1 0 0 2 1
+key 1113 1.8 1 0 0 2 1
+key 1350 2.53929 1 0 0 2 1
+key 159 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 397 0 1 0 0 2 1
+key 634 0.4 1 0 0 2 1
+key 875 1 1 0 0 2 1
+key 1114 1.8 1 0 0 2 1
+key 1351 2.53929 1 0 0 2 1
+key 160 6 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 6
+key 398 0 -0.393913 0 0 2 1
+key 635 0.4 -0.393913 0 0 2 1
+key 876 1 -0.393913 0 0 2 1
+key 1115 1.8 -0.393913 0 0 2 1
+key 1352 2.53929 -0.393913 0 0 2 1
+key 161 6 -0.393913 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 6
+key 399 0 -1.7127 0 0 2 1
+key 636 0.4 -1.7127 0 0 2 1
+key 877 1 -1.7127 0 0 2 1
+key 1116 1.8 -1.7127 0 0 2 1
+key 1353 2.53929 -1.7127 0 0 2 1
+key 162 6 -1.7127 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 7
+key 400 0 1.03123 0 0 2 1
+key 637 0.4 1.03123 0 0 2 1
+key 878 1 1.03123 0 0 2 1
+key 1554 1.5 1.96614 0 0 2 1
+key 1117 1.8 1.03123 0 0 2 1
+key 1354 2.53929 1.03123 0 0 2 1
+key 163 6 1.03123 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 7
+key 401 0 0.838279 0 0 2 1
+key 638 0.4 0.838279 0 0 2 1
+key 879 1 0.838279 0 0 2 1
+key 1555 1.5 1.59376 0 0 2 1
+key 1118 1.8 0.838279 0 0 2 1
+key 1355 2.53929 0.838279 0 0 2 1
+key 164 6 0.838279 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 6
+key 402 0 0 0 0 2 1
+key 639 0.4 0 0 0 2 1
+key 880 1 0 0 0 2 1
+key 1119 1.8 0 0 0 2 1
+key 1356 2.53929 0 0 0 2 1
+key 165 6 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 6
+key 403 0 0.5 0 0 2 1
+key 640 0.4 0.5 0 0 2 1
+key 881 1 0.5 0 0 2 1
+key 1120 1.8 0.5 0 0 2 1
+key 1357 2.53929 0.5 0 0 2 1
+key 166 6 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 6
+key 404 0 1 0 0 2 1
+key 641 0.4 1 0 0 2 1
+key 882 1 1 0 0 2 1
+key 1121 1.8 1 0 0 2 1
+key 1358 2.53929 1 0 0 2 1
+key 167 6 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 6
+key 405 0 1 0 0 2 1
+key 642 0.4 1 0 0 2 1
+key 883 1 1 0 0 2 1
+key 1122 1.8 1 0 0 2 1
+key 1359 2.53929 1 0 0 2 1
+key 168 6 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 6
+key 406 0 1 0 0 2 1
+key 643 0.4 1 0 0 2 1
+key 884 1 1 0 0 2 1
+key 1123 1.8 1 0 0 2 1
+key 1360 2.53929 1 0 0 2 1
+key 169 6 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 6
+key 407 0 1 0 0 2 1
+key 644 0.4 1 0 0 2 1
+key 885 1 1 0 0 2 1
+key 1124 1.8 1 0 0 2 1
+key 1361 2.53929 1 0 0 2 1
+key 170 6 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 9
+key 408 0 0 0 0 2 1
+key 645 0.4 0 0 0 2 1
+key 1520 0.633333 0 0 0 2 1
+key 886 1 0 0 0 2 1
+key 1557 1.48656 0.027451 0 0 2 1
+key 1556 1.5 1 0 0 2 1
+key 1125 1.8 1 0 0 2 1
+key 1362 2.53929 1 0 0 2 1
+key 171 6 1 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 6
+key 409 0 1 0 0 2 1
+key 646 0.4 1 0 0 2 1
+key 887 1 1 0 0 2 1
+key 1126 1.8 1 0 0 2 1
+key 1363 2.53929 1 0 0 2 1
+key 172 6 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 6
+key 410 0 0 0 0 2 1
+key 647 0.4 0 0 0 2 1
+key 888 1 0 0 0 2 1
+key 1127 1.8 0 0 0 2 1
+key 1364 2.53929 0 0 0 2 1
+key 173 6 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 6
+key 411 0 0 0 0 2 1
+key 648 0.4 0 0 0 2 1
+key 889 1 0 0 0 2 1
+key 1128 1.8 0 0 0 2 1
+key 1365 2.53929 0 0 0 2 1
+key 174 6 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 6
+key 412 0 1 0 0 2 1
+key 649 0.4 1 0 0 2 1
+key 890 1 1 0 0 2 1
+key 1129 1.8 1 0 0 2 1
+key 1366 2.53929 1 0 0 2 1
+key 175 6 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 6
+key 413 0 0 0 0 2 1
+key 650 0.4 0 0 0 2 1
+key 891 1 0 0 0 2 1
+key 1130 1.8 0 0 0 2 1
+key 1367 2.53929 0 0 0 2 1
+key 176 6 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 6
+key 414 0 1 0 0 2 1
+key 651 0.4 1 0 0 2 1
+key 892 1 1 0 0 2 1
+key 1131 1.8 1 0 0 2 1
+key 1368 2.53929 1 0 0 2 1
+key 177 6 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 6
+key 415 0 0 0 0 2 1
+key 652 0.4 0 0 0 2 1
+key 893 1 0 0 0 2 1
+key 1132 1.8 0 0 0 2 1
+key 1369 2.53929 0 0 0 2 1
+key 178 6 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 6
+key 416 0 12 0 0 2 1
+key 653 0.4 12 0 0 2 1
+key 894 1 12 0 0 2 1
+key 1133 1.8 12 0 0 2 1
+key 1370 2.53929 12 0 0 2 1
+key 179 6 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 6
+key 417 0 0 0 0 2 1
+key 654 0.4 0 0 0 2 1
+key 895 1 0 0 0 2 1
+key 1134 1.8 0 0 0 2 1
+key 1371 2.53929 0 0 0 2 1
+key 180 6 0 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 6
+key 418 0 0 0 0 2 1
+key 655 0.4 0 0 0 2 1
+key 896 1 0 0 0 2 1
+key 1135 1.8 0 0 0 2 1
+key 1372 2.53929 0 0 0 2 1
+key 181 6 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 6
+key 419 0 1 0 0 2 1
+key 656 0.4 1 0 0 2 1
+key 897 1 1 0 0 2 1
+key 1136 1.8 1 0 0 2 1
+key 1373 2.53929 1 0 0 2 1
+key 182 6 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 6
+key 420 0 1 0 0 2 1
+key 657 0.4 1 0 0 2 1
+key 898 1 1 0 0 2 1
+key 1137 1.8 1 0 0 2 1
+key 1374 2.53929 1 0 0 2 1
+key 183 6 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 6
+key 421 0 0 0 0 2 1
+key 658 0.4 0 0 0 2 1
+key 899 1 0 0 0 2 1
+key 1138 1.8 0 0 0 2 1
+key 1375 2.53929 0 0 0 2 1
+key 184 6 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 6
+key 422 0 0 0 0 2 1
+key 659 0.4 0 0 0 2 1
+key 900 1 0 0 0 2 1
+key 1139 1.8 0 0 0 2 1
+key 1376 2.53929 0 0 0 2 1
+key 185 6 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 6
+key 423 0 0 0 0 2 1
+key 660 0.4 0 0 0 2 1
+key 901 1 0 0 0 2 1
+key 1140 1.8 0 0 0 2 1
+key 1377 2.53929 0 0 0 2 1
+key 186 6 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 424 0 1 0 0 2 1
+key 661 0.4 1 0 0 2 1
+key 902 1 1 0 0 2 1
+key 1141 1.8 1 0 0 2 1
+key 1378 2.53929 1 0 0 2 1
+key 187 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 425 0 1 0 0 2 1
+key 662 0.4 1 0 0 2 1
+key 903 1 1 0 0 2 1
+key 1142 1.8 1 0 0 2 1
+key 1379 2.53929 1 0 0 2 1
+key 188 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 426 0 1 0 0 2 1
+key 663 0.4 1 0 0 2 1
+key 904 1 1 0 0 2 1
+key 1143 1.8 1 0 0 2 1
+key 1380 2.53929 1 0 0 2 1
+key 189 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 427 0 1 0 0 2 1
+key 664 0.4 1 0 0 2 1
+key 905 1 1 0 0 2 1
+key 1144 1.8 1 0 0 2 1
+key 1381 2.53929 1 0 0 2 1
+key 190 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 428 0 0.2 0 0 2 1
+key 665 0.4 0.2 0 0 2 1
+key 906 1 0.2 0 0 2 1
+key 1145 1.8 0.2 0 0 2 1
+key 1382 2.53929 0.2 0 0 2 1
+key 191 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 429 0 0.5 0 0 2 1
+key 666 0.4 0.5 0 0 2 1
+key 907 1 0.5 0 0 2 1
+key 1146 1.8 0.5 0 0 2 1
+key 1383 2.53929 0.5 0 0 2 1
+key 192 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 430 0 32 0 0 2 1
+key 667 0.4 32 0 0 2 1
+key 908 1 32 0 0 2 1
+key 1147 1.8 32 0 0 2 1
+key 1384 2.53929 32 0 0 2 1
+key 193 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 431 0 0.3 0 0 2 1
+key 668 0.4 0.3 0 0 2 1
+key 909 1 0.3 0 0 2 1
+key 1148 1.8 0.3 0 0 2 1
+key 1385 2.53929 0.3 0 0 2 1
+key 194 6 0.3 0 0 2 1
+binding "FT_Names (Copy) (Copy)" "Transform"
+trackCount 43
+track "localPosition.x" 1 0
+keyCount 6
+key 432 0 6 0 0 2 1
+key 669 0.4 6 0 0 2 1
+key 910 1 6 0 0 2 1
+key 1149 1.8 6 0 0 2 1
+key 1386 2.53929 6 0 0 2 1
+key 195 6 6 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 433 0 0 0 0 2 1
+key 670 0.4 0 0 0 2 1
+key 911 1 0 0 0 2 1
+key 1150 1.8 0 0 0 2 1
+key 1387 2.53929 0 0 0 2 1
+key 196 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 434 0 0 0 0 2 1
+key 671 0.4 0 0 0 2 1
+key 912 1 0 0 0 2 1
+key 1151 1.8 0 0 0 2 1
+key 1388 2.53929 0 0 0 2 1
+key 197 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 435 0 -0 0 0 2 1
+key 672 0.4 -0 0 0 2 1
+key 913 1 0 0 0 2 1
+key 1152 1.8 0 0 0 2 1
+key 1389 2.53929 0 0 0 2 1
+key 198 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 436 0 0 0 0 2 1
+key 673 0.4 0 0 0 2 1
+key 914 1 0 0 0 2 1
+key 1153 1.8 0 0 0 2 1
+key 1390 2.53929 0 0 0 2 1
+key 199 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 437 0 -0 0 0 2 1
+key 674 0.4 -0 0 0 2 1
+key 915 1 0 0 0 2 1
+key 1154 1.8 0 0 0 2 1
+key 1391 2.53929 0 0 0 2 1
+key 200 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 438 0 1 0 0 2 1
+key 675 0.4 1 0 0 2 1
+key 916 1 1 0 0 2 1
+key 1155 1.8 1 0 0 2 1
+key 1392 2.53929 1 0 0 2 1
+key 201 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 439 0 1 0 0 2 1
+key 676 0.4 1 0 0 2 1
+key 917 1 1 0 0 2 1
+key 1156 1.8 1 0 0 2 1
+key 1393 2.53929 1 0 0 2 1
+key 202 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 440 0 1 0 0 2 1
+key 677 0.4 1 0 0 2 1
+key 918 1 1 0 0 2 1
+key 1157 1.8 1 0 0 2 1
+key 1394 2.53929 1 0 0 2 1
+key 203 6 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 6
+key 441 0 -0.754341 0 0 2 1
+key 678 0.4 -0.754341 0 0 2 1
+key 919 1 -0.754341 0 0 2 1
+key 1158 1.8 -0.754341 0 0 2 1
+key 1395 2.53929 -0.754341 0 0 2 1
+key 204 6 -0.754341 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 6
+key 442 0 -1.57284 0 0 2 1
+key 679 0.4 -1.57284 0 0 2 1
+key 920 1 -1.57284 0 0 2 1
+key 1159 1.8 -1.57284 0 0 2 1
+key 1396 2.53929 -1.57284 0 0 2 1
+key 205 6 -1.57284 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 7
+key 443 0 0.494792 0 0 2 1
+key 680 0.4 0.494792 0 0 2 1
+key 1039 0.633333 1.07989 0 0 2 1
+key 921 1 0.494792 0 0 2 1
+key 1160 1.8 0.494792 0 0 2 1
+key 1397 2.53929 0.494792 0 0 2 1
+key 206 6 0.494792 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 7
+key 444 0 0.698529 0 0 2 1
+key 681 0.4 0.698529 0 0 2 1
+key 1040 0.633333 1.51929 0 0 2 1
+key 922 1 0.698529 0 0 2 1
+key 1161 1.8 0.698529 0 0 2 1
+key 1398 2.53929 0.698529 0 0 2 1
+key 207 6 0.698529 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 6
+key 445 0 0 0 0 2 1
+key 682 0.4 0 0 0 2 1
+key 923 1 0 0 0 2 1
+key 1162 1.8 0 0 0 2 1
+key 1399 2.53929 0 0 0 2 1
+key 208 6 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 6
+key 446 0 0.5 0 0 2 1
+key 683 0.4 0.5 0 0 2 1
+key 924 1 0.5 0 0 2 1
+key 1163 1.8 0.5 0 0 2 1
+key 1400 2.53929 0.5 0 0 2 1
+key 209 6 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 6
+key 447 0 1 0 0 2 1
+key 684 0.4 1 0 0 2 1
+key 925 1 1 0 0 2 1
+key 1164 1.8 1 0 0 2 1
+key 1401 2.53929 1 0 0 2 1
+key 210 6 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 6
+key 448 0 1 0 0 2 1
+key 685 0.4 1 0 0 2 1
+key 926 1 1 0 0 2 1
+key 1165 1.8 1 0 0 2 1
+key 1402 2.53929 1 0 0 2 1
+key 211 6 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 6
+key 449 0 1 0 0 2 1
+key 686 0.4 1 0 0 2 1
+key 927 1 1 0 0 2 1
+key 1166 1.8 1 0 0 2 1
+key 1403 2.53929 1 0 0 2 1
+key 212 6 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 6
+key 450 0 1 0 0 2 1
+key 687 0.4 1 0 0 2 1
+key 928 1 1 0 0 2 1
+key 1167 1.8 1 0 0 2 1
+key 1404 2.53929 1 0 0 2 1
+key 213 6 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 8
+key 451 0 0 0 0 2 1
+key 688 0.4 0 0 0 2 1
+key 1522 0.6 0 0 0 2 1
+key 1521 0.633333 1 0 0 2 1
+key 929 1 1 0 0 2 1
+key 1168 1.8 1 0 0 2 1
+key 1405 2.53929 1 0 0 2 1
+key 214 6 1 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 6
+key 452 0 1 0 0 2 1
+key 689 0.4 1 0 0 2 1
+key 930 1 1 0 0 2 1
+key 1169 1.8 1 0 0 2 1
+key 1406 2.53929 1 0 0 2 1
+key 215 6 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 6
+key 453 0 0 0 0 2 1
+key 690 0.4 0 0 0 2 1
+key 931 1 0 0 0 2 1
+key 1170 1.8 0 0 0 2 1
+key 1407 2.53929 0 0 0 2 1
+key 216 6 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 6
+key 454 0 0 0 0 2 1
+key 691 0.4 0 0 0 2 1
+key 932 1 0 0 0 2 1
+key 1171 1.8 0 0 0 2 1
+key 1408 2.53929 0 0 0 2 1
+key 217 6 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 6
+key 455 0 1 0 0 2 1
+key 692 0.4 1 0 0 2 1
+key 933 1 1 0 0 2 1
+key 1172 1.8 1 0 0 2 1
+key 1409 2.53929 1 0 0 2 1
+key 218 6 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 6
+key 456 0 0 0 0 2 1
+key 693 0.4 0 0 0 2 1
+key 934 1 0 0 0 2 1
+key 1173 1.8 0 0 0 2 1
+key 1410 2.53929 0 0 0 2 1
+key 219 6 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 6
+key 457 0 1 0 0 2 1
+key 694 0.4 1 0 0 2 1
+key 935 1 1 0 0 2 1
+key 1174 1.8 1 0 0 2 1
+key 1411 2.53929 1 0 0 2 1
+key 220 6 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 6
+key 458 0 0 0 0 2 1
+key 695 0.4 0 0 0 2 1
+key 936 1 0 0 0 2 1
+key 1175 1.8 0 0 0 2 1
+key 1412 2.53929 0 0 0 2 1
+key 221 6 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 6
+key 459 0 12 0 0 2 1
+key 696 0.4 12 0 0 2 1
+key 937 1 12 0 0 2 1
+key 1176 1.8 12 0 0 2 1
+key 1413 2.53929 12 0 0 2 1
+key 222 6 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 6
+key 460 0 0 0 0 2 1
+key 697 0.4 0 0 0 2 1
+key 938 1 0 0 0 2 1
+key 1177 1.8 0 0 0 2 1
+key 1414 2.53929 0 0 0 2 1
+key 223 6 0 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 6
+key 461 0 0 0 0 2 1
+key 698 0.4 0 0 0 2 1
+key 939 1 0 0 0 2 1
+key 1178 1.8 0 0 0 2 1
+key 1415 2.53929 0 0 0 2 1
+key 224 6 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 6
+key 462 0 1 0 0 2 1
+key 699 0.4 1 0 0 2 1
+key 940 1 1 0 0 2 1
+key 1179 1.8 1 0 0 2 1
+key 1416 2.53929 1 0 0 2 1
+key 225 6 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 6
+key 463 0 1 0 0 2 1
+key 700 0.4 1 0 0 2 1
+key 941 1 1 0 0 2 1
+key 1180 1.8 1 0 0 2 1
+key 1417 2.53929 1 0 0 2 1
+key 226 6 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 6
+key 464 0 0 0 0 2 1
+key 701 0.4 0 0 0 2 1
+key 942 1 0 0 0 2 1
+key 1181 1.8 0 0 0 2 1
+key 1418 2.53929 0 0 0 2 1
+key 227 6 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 6
+key 465 0 0 0 0 2 1
+key 702 0.4 0 0 0 2 1
+key 943 1 0 0 0 2 1
+key 1182 1.8 0 0 0 2 1
+key 1419 2.53929 0 0 0 2 1
+key 228 6 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 6
+key 466 0 0 0 0 2 1
+key 703 0.4 0 0 0 2 1
+key 944 1 0 0 0 2 1
+key 1183 1.8 0 0 0 2 1
+key 1420 2.53929 0 0 0 2 1
+key 229 6 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 467 0 1 0 0 2 1
+key 704 0.4 1 0 0 2 1
+key 945 1 1 0 0 2 1
+key 1184 1.8 1 0 0 2 1
+key 1421 2.53929 1 0 0 2 1
+key 230 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 468 0 1 0 0 2 1
+key 705 0.4 1 0 0 2 1
+key 946 1 1 0 0 2 1
+key 1185 1.8 1 0 0 2 1
+key 1422 2.53929 1 0 0 2 1
+key 231 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 469 0 1 0 0 2 1
+key 706 0.4 1 0 0 2 1
+key 947 1 1 0 0 2 1
+key 1186 1.8 1 0 0 2 1
+key 1423 2.53929 1 0 0 2 1
+key 232 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 470 0 1 0 0 2 1
+key 707 0.4 1 0 0 2 1
+key 948 1 1 0 0 2 1
+key 1187 1.8 1 0 0 2 1
+key 1424 2.53929 1 0 0 2 1
+key 233 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 471 0 0.2 0 0 2 1
+key 708 0.4 0.2 0 0 2 1
+key 949 1 0.2 0 0 2 1
+key 1188 1.8 0.2 0 0 2 1
+key 1425 2.53929 0.2 0 0 2 1
+key 234 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 472 0 0.5 0 0 2 1
+key 709 0.4 0.5 0 0 2 1
+key 950 1 0.5 0 0 2 1
+key 1189 1.8 0.5 0 0 2 1
+key 1426 2.53929 0.5 0 0 2 1
+key 235 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 473 0 32 0 0 2 1
+key 710 0.4 32 0 0 2 1
+key 951 1 32 0 0 2 1
+key 1190 1.8 32 0 0 2 1
+key 1427 2.53929 32 0 0 2 1
+key 236 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 474 0 0.3 0 0 2 1
+key 711 0.4 0.3 0 0 2 1
+key 952 1 0.3 0 0 2 1
+key 1191 1.8 0.3 0 0 2 1
+key 1428 2.53929 0.3 0 0 2 1
+key 237 6 0.3 0 0 2 1
+binding "FT_Names (Copy)" "Transform"
+trackCount 43
+track "localPosition.x" 1 0
+keyCount 6
+key 475 0 5 0 0 2 1
+key 712 0.4 5 0 0 2 1
+key 953 1 5 0 0 2 1
+key 1192 1.8 5 0 0 2 1
+key 1429 2.53929 5 0 0 2 1
+key 238 6 5 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 476 0 0 0 0 2 1
+key 713 0.4 0 0 0 2 1
+key 954 1 0 0 0 2 1
+key 1193 1.8 0 0 0 2 1
+key 1430 2.53929 0 0 0 2 1
+key 239 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 477 0 0 0 0 2 1
+key 714 0.4 0 0 0 2 1
+key 955 1 0 0 0 2 1
+key 1194 1.8 0 0 0 2 1
+key 1431 2.53929 0 0 0 2 1
+key 240 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 478 0 -0 0 0 2 1
+key 715 0.4 -0 0 0 2 1
+key 956 1 0 0 0 2 1
+key 1195 1.8 0 0 0 2 1
+key 1432 2.53929 0 0 0 2 1
+key 241 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 479 0 0 0 0 2 1
+key 716 0.4 0 0 0 2 1
+key 957 1 0 0 0 2 1
+key 1196 1.8 0 0 0 2 1
+key 1433 2.53929 0 0 0 2 1
+key 242 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 480 0 -0 0 0 2 1
+key 717 0.4 -0 0 0 2 1
+key 958 1 0 0 0 2 1
+key 1197 1.8 0 0 0 2 1
+key 1434 2.53929 0 0 0 2 1
+key 243 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 481 0 1 0 0 2 1
+key 718 0.4 1 0 0 2 1
+key 959 1 1 0 0 2 1
+key 1198 1.8 1 0 0 2 1
+key 1435 2.53929 1 0 0 2 1
+key 244 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 482 0 1 0 0 2 1
+key 719 0.4 1 0 0 2 1
+key 960 1 1 0 0 2 1
+key 1199 1.8 1 0 0 2 1
+key 1436 2.53929 1 0 0 2 1
+key 245 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 483 0 1 0 0 2 1
+key 720 0.4 1 0 0 2 1
+key 961 1 1 0 0 2 1
+key 1200 1.8 1 0 0 2 1
+key 1437 2.53929 1 0 0 2 1
+key 246 6 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 6
+key 484 0 -1.70226 0 0 2 1
+key 721 0.4 -1.70226 0 0 2 1
+key 962 1 -1.70226 0 0 2 1
+key 1201 1.8 -1.70226 0 0 2 1
+key 1438 2.53929 -1.70226 0 0 2 1
+key 247 6 -1.70226 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 6
+key 485 0 -1.69219 0 0 2 1
+key 722 0.4 -1.69219 0 0 2 1
+key 963 1 -1.69219 0 0 2 1
+key 1202 1.8 -1.69219 0 0 2 1
+key 1439 2.53929 -1.69219 0 0 2 1
+key 248 6 -1.69219 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 6
+key 486 0 3.14358 0 0 2 1
+key 723 0.4 1.32402 0 0 2 1
+key 964 1 1.32402 0 0 2 1
+key 1203 1.8 1.32402 0 0 2 1
+key 1440 2.53929 1.32402 0 0 2 1
+key 249 6 1.32402 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 6
+key 487 0 1.84325 0 0 2 1
+key 724 0.4 0.776907 0 0 2 1
+key 965 1 0.776907 0 0 2 1
+key 1204 1.8 0.776907 0 0 2 1
+key 1441 2.53929 0.776907 0 0 2 1
+key 250 6 0.776907 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 6
+key 488 0 0 0 0 2 1
+key 725 0.4 0 0 0 2 1
+key 966 1 0 0 0 2 1
+key 1205 1.8 0 0 0 2 1
+key 1442 2.53929 0 0 0 2 1
+key 251 6 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 6
+key 489 0 0.5 0 0 2 1
+key 726 0.4 0.5 0 0 2 1
+key 967 1 0.5 0 0 2 1
+key 1206 1.8 0.5 0 0 2 1
+key 1443 2.53929 0.5 0 0 2 1
+key 252 6 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 6
+key 490 0 1 0 0 2 1
+key 727 0.4 1 0 0 2 1
+key 968 1 1 0 0 2 1
+key 1207 1.8 1 0 0 2 1
+key 1444 2.53929 1 0 0 2 1
+key 253 6 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 6
+key 491 0 1 0 0 2 1
+key 728 0.4 1 0 0 2 1
+key 969 1 1 0 0 2 1
+key 1208 1.8 1 0 0 2 1
+key 1445 2.53929 1 0 0 2 1
+key 254 6 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 6
+key 492 0 1 0 0 2 1
+key 729 0.4 1 0 0 2 1
+key 970 1 1 0 0 2 1
+key 1209 1.8 1 0 0 2 1
+key 1446 2.53929 1 0 0 2 1
+key 255 6 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 6
+key 493 0 1 0 0 2 1
+key 730 0.4 1 0 0 2 1
+key 971 1 1 0 0 2 1
+key 1210 1.8 1 0 0 2 1
+key 1447 2.53929 1 0 0 2 1
+key 256 6 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 6
+key 494 0 1 0 0 2 1
+key 731 0.4 1 0 0 2 1
+key 972 1 1 0 0 2 1
+key 1211 1.8 1 0 0 2 1
+key 1448 2.53929 1 0 0 2 1
+key 257 6 1 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 6
+key 495 0 1 0 0 2 1
+key 732 0.4 1 0 0 2 1
+key 973 1 1 0 0 2 1
+key 1212 1.8 1 0 0 2 1
+key 1449 2.53929 1 0 0 2 1
+key 258 6 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 6
+key 496 0 0 0 0 2 1
+key 733 0.4 0 0 0 2 1
+key 974 1 0 0 0 2 1
+key 1213 1.8 0 0 0 2 1
+key 1450 2.53929 0 0 0 2 1
+key 259 6 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 6
+key 497 0 0 0 0 2 1
+key 734 0.4 0 0 0 2 1
+key 975 1 0 0 0 2 1
+key 1214 1.8 0 0 0 2 1
+key 1451 2.53929 0 0 0 2 1
+key 260 6 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 6
+key 498 0 1 0 0 2 1
+key 735 0.4 1 0 0 2 1
+key 976 1 1 0 0 2 1
+key 1215 1.8 1 0 0 2 1
+key 1452 2.53929 1 0 0 2 1
+key 261 6 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 6
+key 499 0 0 0 0 2 1
+key 736 0.4 0 0 0 2 1
+key 977 1 0 0 0 2 1
+key 1216 1.8 0 0 0 2 1
+key 1453 2.53929 0 0 0 2 1
+key 262 6 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 6
+key 500 0 1 0 0 2 1
+key 737 0.4 1 0 0 2 1
+key 978 1 1 0 0 2 1
+key 1217 1.8 1 0 0 2 1
+key 1454 2.53929 1 0 0 2 1
+key 263 6 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 6
+key 501 0 0 0 0 2 1
+key 738 0.4 0 0 0 2 1
+key 979 1 0 0 0 2 1
+key 1218 1.8 0 0 0 2 1
+key 1455 2.53929 0 0 0 2 1
+key 264 6 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 6
+key 502 0 12 0 0 2 1
+key 739 0.4 12 0 0 2 1
+key 980 1 12 0 0 2 1
+key 1219 1.8 12 0 0 2 1
+key 1456 2.53929 12 0 0 2 1
+key 265 6 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 6
+key 503 0 0 0 0 2 1
+key 740 0.4 0 0 0 2 1
+key 981 1 0 0 0 2 1
+key 1220 1.8 0 0 0 2 1
+key 1457 2.53929 0 0 0 2 1
+key 266 6 0 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 6
+key 504 0 0 0 0 2 1
+key 741 0.4 0 0 0 2 1
+key 982 1 0 0 0 2 1
+key 1221 1.8 0 0 0 2 1
+key 1458 2.53929 0 0 0 2 1
+key 267 6 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 6
+key 505 0 1 0 0 2 1
+key 742 0.4 1 0 0 2 1
+key 983 1 1 0 0 2 1
+key 1222 1.8 1 0 0 2 1
+key 1459 2.53929 1 0 0 2 1
+key 268 6 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 6
+key 506 0 1 0 0 2 1
+key 743 0.4 1 0 0 2 1
+key 984 1 1 0 0 2 1
+key 1223 1.8 1 0 0 2 1
+key 1460 2.53929 1 0 0 2 1
+key 269 6 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 6
+key 507 0 0 0 0 2 1
+key 744 0.4 0 0 0 2 1
+key 985 1 0 0 0 2 1
+key 1224 1.8 0 0 0 2 1
+key 1461 2.53929 0 0 0 2 1
+key 270 6 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 6
+key 508 0 0 0 0 2 1
+key 745 0.4 0 0 0 2 1
+key 986 1 0 0 0 2 1
+key 1225 1.8 0 0 0 2 1
+key 1462 2.53929 0 0 0 2 1
+key 271 6 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 6
+key 509 0 0 0 0 2 1
+key 746 0.4 0 0 0 2 1
+key 987 1 0 0 0 2 1
+key 1226 1.8 0 0 0 2 1
+key 1463 2.53929 0 0 0 2 1
+key 272 6 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 510 0 1 0 0 2 1
+key 747 0.4 1 0 0 2 1
+key 988 1 1 0 0 2 1
+key 1227 1.8 1 0 0 2 1
+key 1464 2.53929 1 0 0 2 1
+key 273 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 511 0 1 0 0 2 1
+key 748 0.4 1 0 0 2 1
+key 989 1 1 0 0 2 1
+key 1228 1.8 1 0 0 2 1
+key 1465 2.53929 1 0 0 2 1
+key 274 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 512 0 1 0 0 2 1
+key 749 0.4 1 0 0 2 1
+key 990 1 1 0 0 2 1
+key 1229 1.8 1 0 0 2 1
+key 1466 2.53929 1 0 0 2 1
+key 275 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 513 0 1 0 0 2 1
+key 750 0.4 1 0 0 2 1
+key 991 1 1 0 0 2 1
+key 1230 1.8 1 0 0 2 1
+key 1467 2.53929 1 0 0 2 1
+key 276 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 514 0 0.2 0 0 2 1
+key 751 0.4 0.2 0 0 2 1
+key 992 1 0.2 0 0 2 1
+key 1231 1.8 0.2 0 0 2 1
+key 1468 2.53929 0.2 0 0 2 1
+key 277 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 515 0 0.5 0 0 2 1
+key 752 0.4 0.5 0 0 2 1
+key 993 1 0.5 0 0 2 1
+key 1232 1.8 0.5 0 0 2 1
+key 1469 2.53929 0.5 0 0 2 1
+key 278 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 516 0 32 0 0 2 1
+key 753 0.4 32 0 0 2 1
+key 994 1 32 0 0 2 1
+key 1233 1.8 32 0 0 2 1
+key 1470 2.53929 32 0 0 2 1
+key 279 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 517 0 0.3 0 0 2 1
+key 754 0.4 0.3 0 0 2 1
+key 995 1 0.3 0 0 2 1
+key 1234 1.8 0.3 0 0 2 1
+key 1471 2.53929 0.3 0 0 2 1
+key 280 6 0.3 0 0 2 1
+binding "FT_Names (Copy) (Copy) (Copy) (Copy) (Copy)" "Transform"
+trackCount 43
+track "localPosition.x" 1 0
+keyCount 6
+key 518 0 9 0 0 2 1
+key 755 0.4 9 0 0 2 1
+key 996 1 9 0 0 2 1
+key 1235 1.8 9 0 0 2 1
+key 1472 2.53929 9 0 0 2 1
+key 281 6 9 0 0 2 1
+track "localPosition.y" 1 0
+keyCount 6
+key 519 0 0 0 0 2 1
+key 756 0.4 0 0 0 2 1
+key 997 1 0 0 0 2 1
+key 1236 1.8 0 0 0 2 1
+key 1473 2.53929 0 0 0 2 1
+key 282 6 0 0 0 2 1
+track "localPosition.z" 1 0
+keyCount 6
+key 520 0 0 0 0 2 1
+key 757 0.4 0 0 0 2 1
+key 998 1 0 0 0 2 1
+key 1237 1.8 0 0 0 2 1
+key 1474 2.53929 0 0 0 2 1
+key 283 6 0 0 0 2 1
+track "localRotation.x" 1 0
+keyCount 6
+key 521 0 -0 0 0 2 1
+key 758 0.4 -0 0 0 2 1
+key 999 1 0 0 0 2 1
+key 1238 1.8 0 0 0 2 1
+key 1475 2.53929 0 0 0 2 1
+key 284 6 -0 0 0 2 1
+track "localRotation.y" 1 0
+keyCount 6
+key 522 0 0 0 0 2 1
+key 759 0.4 0 0 0 2 1
+key 1000 1 0 0 0 2 1
+key 1239 1.8 0 0 0 2 1
+key 1476 2.53929 0 0 0 2 1
+key 285 6 0 0 0 2 1
+track "localRotation.z" 1 0
+keyCount 6
+key 523 0 -0 0 0 2 1
+key 760 0.4 -0 0 0 2 1
+key 1001 1 0 0 0 2 1
+key 1240 1.8 0 0 0 2 1
+key 1477 2.53929 0 0 0 2 1
+key 286 6 -0 0 0 2 1
+track "localScale.x" 1 0
+keyCount 6
+key 524 0 1 0 0 2 1
+key 761 0.4 1 0 0 2 1
+key 1002 1 1 0 0 2 1
+key 1241 1.8 1 0 0 2 1
+key 1478 2.53929 1 0 0 2 1
+key 287 6 1 0 0 2 1
+track "localScale.y" 1 0
+keyCount 6
+key 525 0 1 0 0 2 1
+key 762 0.4 1 0 0 2 1
+key 1003 1 1 0 0 2 1
+key 1242 1.8 1 0 0 2 1
+key 1479 2.53929 1 0 0 2 1
+key 288 6 1 0 0 2 1
+track "localScale.z" 1 0
+keyCount 6
+key 526 0 1 0 0 2 1
+key 763 0.4 1 0 0 2 1
+key 1004 1 1 0 0 2 1
+key 1243 1.8 1 0 0 2 1
+key 1480 2.53929 1 0 0 2 1
+key 289 6 1 0 0 2 1
+track "UI.Position.x" 1 0
+keyCount 6
+key 527 0 -0.0854235 0 0 2 1
+key 764 0.4 -0.0854235 0 0 2 1
+key 1005 1 -0.0854235 0 0 2 1
+key 1244 1.8 -0.0854235 0 0 2 1
+key 1481 2.53929 -0.0854235 0 0 2 1
+key 290 6 -0.0854235 0 0 2 1
+track "UI.Position.y" 1 0
+keyCount 6
+key 528 0 -1.69103 0 0 2 1
+key 765 0.4 -1.69103 0 0 2 1
+key 1006 1 -1.69103 0 0 2 1
+key 1245 1.8 -1.69103 0 0 2 1
+key 1482 2.53929 -1.69103 0 0 2 1
+key 291 6 -1.69103 0 0 2 1
+track "UI.Size.x" 1 0
+keyCount 6
+key 529 0 5.30083 0 0 2 1
+key 766 0.4 5.30083 0 0 2 1
+key 1007 1 5.30083 0 0 2 1
+key 1246 1.8 5.30083 0 0 2 1
+key 1483 2.53929 5.30083 0 0 2 1
+key 292 6 5.30083 0 0 2 1
+track "UI.Size.y" 1 0
+keyCount 6
+key 530 0 1.59323 0 0 2 1
+key 767 0.4 1.59323 0 0 2 1
+key 1008 1 1.59323 0 0 2 1
+key 1247 1.8 1.59323 0 0 2 1
+key 1484 2.53929 1.59323 0 0 2 1
+key 293 6 1.59323 0 0 2 1
+track "UI.Rotation" 1 0
+keyCount 6
+key 531 0 0 0 0 2 1
+key 768 0.4 0 0 0 2 1
+key 1009 1 0 0 0 2 1
+key 1248 1.8 0 0 0 2 1
+key 1485 2.53929 0 0 0 2 1
+key 294 6 0 0 0 2 1
+track "UI.SliderValue" 1 0
+keyCount 6
+key 532 0 0.5 0 0 2 1
+key 769 0.4 0.5 0 0 2 1
+key 1010 1 0.5 0 0 2 1
+key 1249 1.8 0.5 0 0 2 1
+key 1486 2.53929 0.5 0 0 2 1
+key 295 6 0.5 0 0 2 1
+track "UI.TextScale" 1 0
+keyCount 6
+key 533 0 1 0 0 2 1
+key 770 0.4 1 0 0 2 1
+key 1011 1 1 0 0 2 1
+key 1250 1.8 1 0 0 2 1
+key 1487 2.53929 1 0 0 2 1
+key 296 6 1 0 0 2 1
+track "UI.Color.r" 1 0
+keyCount 6
+key 534 0 1 0 0 2 1
+key 771 0.4 1 0 0 2 1
+key 1012 1 1 0 0 2 1
+key 1251 1.8 1 0 0 2 1
+key 1488 2.53929 1 0 0 2 1
+key 297 6 1 0 0 2 1
+track "UI.Color.g" 1 0
+keyCount 6
+key 535 0 1 0 0 2 1
+key 772 0.4 1 0 0 2 1
+key 1013 1 1 0 0 2 1
+key 1252 1.8 1 0 0 2 1
+key 1489 2.53929 1 0 0 2 1
+key 298 6 1 0 0 2 1
+track "UI.Color.b" 1 0
+keyCount 6
+key 536 0 1 0 0 2 1
+key 773 0.4 1 0 0 2 1
+key 1014 1 1 0 0 2 1
+key 1253 1.8 1 0 0 2 1
+key 1490 2.53929 1 0 0 2 1
+key 299 6 1 0 0 2 1
+track "UI.Color.a" 1 0
+keyCount 6
+key 537 0 1 0 0 2 1
+key 774 0.4 1 0 0 2 1
+key 1015 1 1 0 0 2 1
+key 1254 1.8 1 0 0 2 1
+key 1491 2.53929 1 0 0 2 1
+key 300 6 1 0 0 2 1
+track "UI.Interactable" 1 0
+keyCount 6
+key 538 0 1 0 0 2 1
+key 775 0.4 1 0 0 2 1
+key 1016 1 1 0 0 2 1
+key 1255 1.8 1 0 0 2 1
+key 1492 2.53929 1 0 0 2 1
+key 301 6 1 0 0 2 1
+track "UI.Anchor" 1 0
+keyCount 6
+key 539 0 0 0 0 2 1
+key 776 0.4 0 0 0 2 1
+key 1017 1 0 0 0 2 1
+key 1256 1.8 0 0 0 2 1
+key 1493 2.53929 0 0 0 2 1
+key 302 6 0 0 0 2 1
+track "UI.RenderIn3D" 1 0
+keyCount 6
+key 540 0 0 0 0 2 1
+key 777 0.4 0 0 0 2 1
+key 1018 1 0 0 0 2 1
+key 1257 1.8 0 0 0 2 1
+key 1494 2.53929 0 0 0 2 1
+key 303 6 0 0 0 2 1
+track "UI.SpriteSheetEnabled" 1 0
+keyCount 6
+key 541 0 1 0 0 2 1
+key 778 0.4 1 0 0 2 1
+key 1019 1 1 0 0 2 1
+key 1258 1.8 1 0 0 2 1
+key 1495 2.53929 1 0 0 2 1
+key 304 6 1 0 0 2 1
+track "UI.SpriteCustomFramesEnabled" 1 0
+keyCount 6
+key 542 0 0 0 0 2 1
+key 779 0.4 0 0 0 2 1
+key 1020 1 0 0 0 2 1
+key 1259 1.8 0 0 0 2 1
+key 1496 2.53929 0 0 0 2 1
+key 305 6 0 0 0 2 1
+track "UI.MaskChildren" 1 0
+keyCount 6
+key 543 0 1 0 0 2 1
+key 780 0.4 1 0 0 2 1
+key 1021 1 1 0 0 2 1
+key 1260 1.8 1 0 0 2 1
+key 1497 2.53929 1 0 0 2 1
+key 306 6 1 0 0 2 1
+track "UI.SpriteFrame" 1 0
+keyCount 6
+key 544 0 0 0 0 2 1
+key 781 0.4 0 0 0 2 1
+key 1022 1 0 0 0 2 1
+key 1261 1.8 0 0 0 2 1
+key 1498 2.53929 0 0 0 2 1
+key 307 6 0 0 0 2 1
+track "UI.SpriteSheetFPS" 1 0
+keyCount 6
+key 545 0 12 0 0 2 1
+key 782 0.4 12 0 0 2 1
+key 1023 1 12 0 0 2 1
+key 1262 1.8 12 0 0 2 1
+key 1499 2.53929 12 0 0 2 1
+key 308 6 12 0 0 2 1
+track "UI.SpriteSheetLoop" 1 0
+keyCount 6
+key 546 0 0 0 0 2 1
+key 783 0.4 0 0 0 2 1
+key 1024 1 0 0 0 2 1
+key 1263 1.8 0 0 0 2 1
+key 1500 2.53929 0 0 0 2 1
+key 309 6 0 0 0 2 1
+track "UI.TextEffectFlags" 1 0
+keyCount 6
+key 547 0 0 0 0 2 1
+key 784 0.4 0 0 0 2 1
+key 1025 1 0 0 0 2 1
+key 1264 1.8 0 0 0 2 1
+key 1501 2.53929 0 0 0 2 1
+key 310 6 0 0 0 2 1
+track "UI.TextEffectSpeed" 1 0
+keyCount 6
+key 548 0 1 0 0 2 1
+key 785 0.4 1 0 0 2 1
+key 1026 1 1 0 0 2 1
+key 1265 1.8 1 0 0 2 1
+key 1502 2.53929 1 0 0 2 1
+key 311 6 1 0 0 2 1
+track "UI.TextEffectIntensity" 1 0
+keyCount 6
+key 549 0 1 0 0 2 1
+key 786 0.4 1 0 0 2 1
+key 1027 1 1 0 0 2 1
+key 1266 1.8 1 0 0 2 1
+key 1503 2.53929 1 0 0 2 1
+key 312 6 1 0 0 2 1
+track "UI.ReceiveLighting2D" 1 0
+keyCount 6
+key 550 0 0 0 0 2 1
+key 787 0.4 0 0 0 2 1
+key 1028 1 0 0 0 2 1
+key 1267 1.8 0 0 0 2 1
+key 1504 2.53929 0 0 0 2 1
+key 313 6 0 0 0 2 1
+track "UI.UnlitLighting2D" 1 0
+keyCount 6
+key 551 0 0 0 0 2 1
+key 788 0.4 0 0 0 2 1
+key 1029 1 0 0 0 2 1
+key 1268 1.8 0 0 0 2 1
+key 1505 2.53929 0 0 0 2 1
+key 314 6 0 0 0 2 1
+track "UI.EmissiveLighting2D" 1 0
+keyCount 6
+key 552 0 0 0 0 2 1
+key 789 0.4 0 0 0 2 1
+key 1030 1 0 0 0 2 1
+key 1269 1.8 0 0 0 2 1
+key 1506 2.53929 0 0 0 2 1
+key 315 6 0 0 0 2 1
+track "Material.Color.r" 1 0
+keyCount 6
+key 553 0 1 0 0 2 1
+key 790 0.4 1 0 0 2 1
+key 1031 1 1 0 0 2 1
+key 1270 1.8 1 0 0 2 1
+key 1507 2.53929 1 0 0 2 1
+key 316 6 1 0 0 2 1
+track "Material.Color.g" 1 0
+keyCount 6
+key 554 0 1 0 0 2 1
+key 791 0.4 1 0 0 2 1
+key 1032 1 1 0 0 2 1
+key 1271 1.8 1 0 0 2 1
+key 1508 2.53929 1 0 0 2 1
+key 317 6 1 0 0 2 1
+track "Material.Color.b" 1 0
+keyCount 6
+key 555 0 1 0 0 2 1
+key 792 0.4 1 0 0 2 1
+key 1033 1 1 0 0 2 1
+key 1272 1.8 1 0 0 2 1
+key 1509 2.53929 1 0 0 2 1
+key 318 6 1 0 0 2 1
+track "Material.Alpha" 1 0
+keyCount 6
+key 556 0 1 0 0 2 1
+key 793 0.4 1 0 0 2 1
+key 1034 1 1 0 0 2 1
+key 1273 1.8 1 0 0 2 1
+key 1510 2.53929 1 0 0 2 1
+key 319 6 1 0 0 2 1
+track "Material.AmbientStrength" 1 0
+keyCount 6
+key 557 0 0.2 0 0 2 1
+key 794 0.4 0.2 0 0 2 1
+key 1035 1 0.2 0 0 2 1
+key 1274 1.8 0.2 0 0 2 1
+key 1511 2.53929 0.2 0 0 2 1
+key 320 6 0.2 0 0 2 1
+track "Material.SpecularStrength" 1 0
+keyCount 6
+key 558 0 0.5 0 0 2 1
+key 795 0.4 0.5 0 0 2 1
+key 1036 1 0.5 0 0 2 1
+key 1275 1.8 0.5 0 0 2 1
+key 1512 2.53929 0.5 0 0 2 1
+key 321 6 0.5 0 0 2 1
+track "Material.Shininess" 1 0
+keyCount 6
+key 559 0 32 0 0 2 1
+key 796 0.4 32 0 0 2 1
+key 1037 1 32 0 0 2 1
+key 1276 1.8 32 0 0 2 1
+key 1513 2.53929 32 0 0 2 1
+key 322 6 32 0 0 2 1
+track "Material.TextureMix" 1 0
+keyCount 6
+key 560 0 0.3 0 0 2 1
+key 797 0.4 0.3 0 0 2 1
+key 1038 1 0.3 0 0 2 1
+key 1277 1.8 0.3 0 0 2 1
+key 1514 2.53929 0.3 0 0 2 1
+key 323 6 0.3 0 0 2 1

@@ -1,0 +1,165 @@
+add ModuCPP;
+add ModuCPP.Experimental;
+add ModuEngine;
+public class FrameListPlayer : ModuNode
+{
+    [Header("Frames from a folder")]
+    public string framePrefix;
+    [Slider(0, 240)] public int frameCount = 0;
+    [Slider(1, 6)] public int digits = 3;
+    public string extension = ".png";
+
+    [Header("Frames listed explicitly")]
+    public string[] framePaths;
+
+    [Header("Playback")]
+    [Slider(0.1f, 60.0f)] public float fps = 15.0f;
+    public bool loop = true;
+    public bool playOnBegin = true;
+    public bool restartWhenEnabled = true;
+    public bool holdLastFrame = true;
+
+    [Header("Audio")]
+    public string startAudioClip;
+    [Slider(0.0f, 2.0f)] public float audioVolume = 1.0f;
+    // AudioSourceComponent defaults loop to true, so a stinger dropped into the
+    // object's Audio Source repeats forever. A spawn sound is a one-shot, so the
+    // flag is forced off here unless you deliberately want a looping clip.
+    public bool loopAudio = false;
+
+    [Header("On Finish")]
+    public bool disableSelfOnFinish = false;
+    [ObjectList] public string[] enableOnFinish;
+    [ObjectList] public string[] disableOnFinish;
+
+    private float accumulator = 0.0f;
+    private int frame = 0;
+    private bool playing = false;
+    private bool finished = false;
+    private bool wasEnabled = false;
+    private int lastRestartSerial = 0;
+    private string appliedPath;
+
+    inspector
+    {
+        Tabs {
+            Tab("Frames")   { AutoFields(framePrefix, frameCount, digits, extension, framePaths); }
+            Tab("Playback") { AutoFields(fps, loop, playOnBegin, restartWhenEnabled, holdLastFrame); }
+            Tab("Audio")    { AutoFields(startAudioClip, audioVolume, loopAudio); }
+            Tab("Finish")   { AutoFields(disableSelfOnFinish, enableOnFinish, disableOnFinish); }
+            Tab("Runtime")  {
+                Run(ImGui::TextDisabled("Frames: %d", ResolveCount()));
+                Run(ImGui::TextDisabled("Frame: %d", frame));
+                Run(ImGui::TextDisabled("Applied: %s", appliedPath.empty() ? "(none)" : appliedPath.c_str()));
+            }
+        }
+    }
+
+    void Begin()
+    {
+        lastRestartSerial = ParseInt(ctx.GetSetting("restartSerial", "0"), 0);
+        wasEnabled = ctx.IsObjectEnabled();
+        // Loose frames are whole images, so any sheet UV mapping left on the
+        // object from a previous assignment would crop them. Clear it once here
+        // rather than making it something to remember in the inspector.
+        if (ctx.object) {
+            ctx.object->ui.spriteSheetEnabled = false;
+            ctx.object->ui.spriteCustomFramesEnabled = false;
+        }
+        Rewind(playOnBegin);
+    }
+
+    void TickUpdate()
+    {
+        if (!ctx.object) return;
+
+        const bool enabledNow = ctx.IsObjectEnabled();
+        if (restartWhenEnabled && enabledNow && !wasEnabled) Rewind(true);
+        wasEnabled = enabledNow;
+        if (!enabledNow) return;
+
+        const int restartSerial = ParseInt(ctx.GetSetting("restartSerial", "0"), 0);
+        if (restartSerial != lastRestartSerial) {
+            lastRestartSerial = restartSerial;
+            Rewind(true);
+        }
+        if (ctx.GetSettingBool("paused", false)) return;
+        if (!playing) return;
+
+        const int total = ResolveCount();
+        if (total <= 0 || fps <= 0.0f) return;
+        if (total == 1) { ApplyFrame(0); return; }
+
+        accumulator += Math.Max(0.0f, dt) * fps;
+        while (accumulator >= 1.0f) {
+            accumulator -= 1.0f;
+            frame += 1;
+            if (frame >= total) {
+                if (loop) {
+                    frame = 0;
+                } else {
+                    frame = holdLastFrame ? total - 1 : 0;
+                    Finish();
+                    break;
+                }
+            }
+        }
+        ApplyFrame(frame);
+    }
+
+    int ResolveCount()
+    {
+        if (!framePrefix.empty()) return Math.Max(0, frameCount);
+        return static_cast<int>(framePaths.size());
+    }
+
+    string PathForFrame(int index)
+    {
+        if (framePrefix.empty()) {
+            if (index < 0 || index >= static_cast<int>(framePaths.size())) return "";
+            return framePaths[static_cast<size_t>(index)];
+        }
+        // Zero-pad to `digits`, matching the extractor's 000.png naming.
+        string number = std::to_string(Math.Max(0, index));
+        while (static_cast<int>(number.size()) < Math.Max(1, digits)) {
+            number = "0" + number;
+        }
+        return framePrefix + number + extension;
+    }
+
+    void ApplyFrame(int index)
+    {
+        const string path = PathForFrame(index);
+        if (path.empty() || path == appliedPath) return;
+        // Not a direct write to albedoTexturePath: the texture cache opens the
+        // string as given, so a project-relative path would resolve against the
+        // process working directory and load nothing. SetSpriteTexture resolves
+        // against the project root first.
+        ctx.SetSpriteTexture(path);
+        appliedPath = path;
+    }
+
+    void Rewind(bool startPlaying)
+    {
+        accumulator = 0.0f;
+        frame = 0;
+        finished = false;
+        playing = startPlaying;
+        appliedPath.clear();
+        ApplyFrame(0);
+        ctx.SetAudioLoop(loopAudio);
+        if (startPlaying && !startAudioClip.empty()) {
+            ctx.PlayAudioOneShot(startAudioClip, audioVolume);
+        }
+    }
+
+    void Finish()
+    {
+        playing = false;
+        finished = true;
+        ctx.SetSettingBool("finished", true);
+        SetObjectsEnabledState(ctx, enableOnFinish, true);
+        SetObjectsEnabledState(ctx, disableOnFinish, false);
+        if (disableSelfOnFinish) ctx.SetObjectEnabled(false);
+    }
+}
